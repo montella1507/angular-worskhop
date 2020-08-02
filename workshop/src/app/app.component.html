@@ -51,11 +51,14 @@
           class="flex-grow-0 d-none d-xl-block h-100 header-spree-fluid-primary-navigation"
         >
           <ul class="nav h-100 main-nav-bar">
-            <li class="navbar main-nav-bar-dropdown main-nav-bar-category">
+            <li
+              class="navbar main-nav-bar-dropdown main-nav-bar-category"
+              *ngFor="let category of categories"
+            >
               <a
                 class="p-2 main-nav-bar-item main-nav-bar-category-button"
-                href="https://demo.spreecommerce.org/t/women"
-                >Women</a
+                [href]="category.url"
+                >{{ category.name }}</a
               >
               <div class="w-100 shadow main-nav-bar-category-dropdown">
                 <div
@@ -67,265 +70,31 @@
                         Categories
                       </div>
                       <ul class="pl-0">
-                        <li>
+                        <li *ngFor="let subcategory of category.categories">
                           <a
                             class="text-uppercase main-nav-bar-category-links"
-                            href="https://demo.spreecommerce.org/t/women/skirts"
-                            >Skirts</a
-                          >
-                        </li>
-                        <li>
-                          <a
-                            class="text-uppercase main-nav-bar-category-links"
-                            href="https://demo.spreecommerce.org/t/women/dresses"
-                            >Dresses</a
-                          >
-                        </li>
-                        <li>
-                          <a
-                            class="text-uppercase main-nav-bar-category-links"
-                            href="https://demo.spreecommerce.org/t/women/shirts-and-blouses"
-                            >Shirts and Blouses</a
-                          >
-                        </li>
-                        <li>
-                          <a
-                            class="text-uppercase main-nav-bar-category-links"
-                            href="https://demo.spreecommerce.org/t/women/sweaters"
-                            >Sweaters</a
-                          >
-                        </li>
-                        <li>
-                          <a
-                            class="text-uppercase main-nav-bar-category-links"
-                            href="https://demo.spreecommerce.org/t/women/tops-and-t-shirts"
-                            >Tops and T-shirts</a
-                          >
-                        </li>
-                        <li>
-                          <a
-                            class="text-uppercase main-nav-bar-category-links"
-                            href="https://demo.spreecommerce.org/t/women/jackets-and-coats"
-                            >Jackets and Coats</a
+                            [href]="subcategory.url"
+                            >{{ subcategory.name }}</a
                           >
                         </li>
                       </ul>
                     </div>
                     <a
-                      href="https://demo.spreecommerce.org/t/women/new-collection/summer-collection"
+                     *ngFor="let banner of category.banners"
+                      [href]="banner.url"
                     >
                       <div class="category-image text-center mx-3">
                         <img
-                          data-src="https://d9rok4vaowhj0.cloudfront.net/assets/meganav/promo_banner_left-first-category-3165934932fa14ee8864585996e53d6ccddf04d839fe7a40527914050e0d3cfa.jpg"
-                          data-srcset=""
                           class="lazyloaded"
                           alt="Summer 2019"
-                          src="assets/images/promo_banner_left-first-category-3165934932fa14ee8864585996e53d6ccddf04d839fe7a40527914050e0d3cfa.jpg"
+                          [src]="banner.imageUrl"
                         />
                         <div class="category-box">
                           <div class="category-box-small-text">
-                            New collection
+                            {{banner.name}}
                           </div>
                           <div class="category-box-big-text">
-                            Summer 2019
-                          </div>
-                        </div>
-                      </div>
-                    </a>
-                    <a
-                      href="https://demo.spreecommerce.org/t/women/new-collection/special-offers"
-                    >
-                      <div class="category-image text-center mx-3">
-                        <img
-                          data-src="https://d9rok4vaowhj0.cloudfront.net/assets/meganav/promo_banner_right-first-category-c4e12a80f130cf2a443b3222d1dab17a3239f79eb688a41306fcd38cbd13b2db.jpg"
-                          data-srcset=""
-                          class="lazyloaded"
-                          alt="Get up to 30% off"
-                          src="assets/images/promo_banner_right-first-category-c4e12a80f130cf2a443b3222d1dab17a3239f79eb688a41306fcd38cbd13b2db.jpg"
-                        />
-                        <div class="category-box">
-                          <div class="category-box-small-text">
-                            Special Offers
-                          </div>
-                          <div class="category-box-big-text">
-                            Get up to 30% off
-                          </div>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="navbar main-nav-bar-dropdown main-nav-bar-category">
-              <a
-                class="p-2 main-nav-bar-item main-nav-bar-category-button"
-                href="https://demo.spreecommerce.org/t/men"
-                >Men</a
-              >
-              <div class="w-100 shadow main-nav-bar-category-dropdown">
-                <div
-                  class="container p-0 d-flex justify-content-xl-around mx-auto"
-                >
-                  <div class="row">
-                    <div class="category-links">
-                      <div class="category-links-header text-uppercase">
-                        Categories
-                      </div>
-                      <ul class="pl-0">
-                        <li>
-                          <a
-                            class="text-uppercase main-nav-bar-category-links"
-                            href="https://demo.spreecommerce.org/t/men/shirts"
-                            >Shirts</a
-                          >
-                        </li>
-                        <li>
-                          <a
-                            class="text-uppercase main-nav-bar-category-links"
-                            href="https://demo.spreecommerce.org/t/men/t-shirts"
-                            >T-shirts</a
-                          >
-                        </li>
-                        <li>
-                          <a
-                            class="text-uppercase main-nav-bar-category-links"
-                            href="https://demo.spreecommerce.org/t/men/sweaters"
-                            >Sweaters</a
-                          >
-                        </li>
-                        <li>
-                          <a
-                            class="text-uppercase main-nav-bar-category-links"
-                            href="https://demo.spreecommerce.org/t/men/jackets-and-coats"
-                            >Jackets and Coats</a
-                          >
-                        </li>
-                      </ul>
-                    </div>
-                    <a
-                      href="https://demo.spreecommerce.org/t/men/new-collection/summer-collection"
-                    >
-                      <div class="category-image text-center mx-3">
-                        <img
-                          data-src="https://d9rok4vaowhj0.cloudfront.net/assets/meganav/promo_banner_left-second-category-681dfee066c7008a570706c65a80a2cc6785ece292bac6ee5b0fc7d3f4142c3f.jpg"
-                          data-srcset=""
-                          class="lazyloaded"
-                          alt="Summer 2019"
-                          src="assets/images/promo_banner_left-second-category-681dfee066c7008a570706c65a80a2cc6785ece292bac6ee5b0fc7d3f4142c3f.jpg"
-                        />
-                        <div class="category-box">
-                          <div class="category-box-small-text">
-                            New collection
-                          </div>
-                          <div class="category-box-big-text">
-                            Summer 2019
-                          </div>
-                        </div>
-                      </div>
-                    </a>
-                    <a
-                      href="https://demo.spreecommerce.org/t/men/new-collection/special-offers"
-                    >
-                      <div class="category-image text-center mx-3">
-                        <img
-                          data-src="https://d9rok4vaowhj0.cloudfront.net/assets/meganav/promo_banner_right-second-category-ce646eee4f79a7ff911baee6ed6f38e8f84c94a6354d45a9326f5ceeeff56d1c.jpg"
-                          data-srcset=""
-                          class="lazyloaded"
-                          alt="Get up to 30% off"
-                          src="assets/images/promo_banner_right-second-category-ce646eee4f79a7ff911baee6ed6f38e8f84c94a6354d45a9326f5ceeeff56d1c.jpg"
-                        />
-                        <div class="category-box">
-                          <div class="category-box-small-text">
-                            Special Offers
-                          </div>
-                          <div class="category-box-big-text">
-                            Get up to 30% off
-                          </div>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="navbar main-nav-bar-dropdown main-nav-bar-category">
-              <a
-                class="p-2 main-nav-bar-item main-nav-bar-category-button"
-                href="https://demo.spreecommerce.org/t/sportswear"
-                >Sportswear</a
-              >
-              <div class="w-100 shadow main-nav-bar-category-dropdown">
-                <div
-                  class="container p-0 d-flex justify-content-xl-around mx-auto"
-                >
-                  <div class="row">
-                    <div class="category-links">
-                      <div class="category-links-header text-uppercase">
-                        Categories
-                      </div>
-                      <ul class="pl-0">
-                        <li>
-                          <a
-                            class="text-uppercase main-nav-bar-category-links"
-                            href="https://demo.spreecommerce.org/t/sportswear/tops"
-                            >Tops</a
-                          >
-                        </li>
-                        <li>
-                          <a
-                            class="text-uppercase main-nav-bar-category-links"
-                            href="https://demo.spreecommerce.org/t/sportswear/sweatshirts"
-                            >Sweatshirts</a
-                          >
-                        </li>
-                        <li>
-                          <a
-                            class="text-uppercase main-nav-bar-category-links"
-                            href="https://demo.spreecommerce.org/t/sportswear/pants"
-                            >Pants</a
-                          >
-                        </li>
-                      </ul>
-                    </div>
-                    <a
-                      href="https://demo.spreecommerce.org/t/sportswear/new-collection/summer-collection"
-                    >
-                      <div class="category-image text-center mx-3">
-                        <img
-                          data-src="https://d9rok4vaowhj0.cloudfront.net/assets/meganav/promo_banner_left-third-category-3fa1d49caa21e7aea629b053b2337b6fc1677cbc0fd4176d2da0cfd3a40e2d3e.jpg"
-                          data-srcset=""
-                          class="lazyload"
-                          alt="Summer 2019"
-                          src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20350%20234&#39;%3E%3C/svg%3E"
-                        />
-                        <div class="category-box">
-                          <div class="category-box-small-text">
-                            New collection
-                          </div>
-                          <div class="category-box-big-text">
-                            Summer 2019
-                          </div>
-                        </div>
-                      </div>
-                    </a>
-                    <a
-                      href="https://demo.spreecommerce.org/t/sportswear/new-collection/special-offers"
-                    >
-                      <div class="category-image text-center mx-3">
-                        <img
-                          data-src="https://d9rok4vaowhj0.cloudfront.net/assets/meganav/promo_banner_right-third-category-c2f59ed45fb8e04522928ce255d6eb0a7c03dad5a4265f93bdca5c2c61b8bdf2.jpg"
-                          data-srcset=""
-                          class="lazyload"
-                          alt="Get up to 30% off"
-                          src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20350%20234&#39;%3E%3C/svg%3E"
-                        />
-                        <div class="category-box">
-                          <div class="category-box-small-text">
-                            Special Offers
-                          </div>
-                          <div class="category-box-big-text">
-                            Get up to 30% off
+                            {{banner.text}}
                           </div>
                         </div>
                       </div>
@@ -2311,7 +2080,8 @@
             <div class="col-md-12 col-lg-9" data-hook="homepage_products">
               <div class="row">
                 <!-- MARIAN START -->
-                <div  *ngFor="let product of products"
+                <div
+                  *ngFor="let product of products"
                   [id]="product.id"
                   class="col-sm-4 col-6 mb-3 mb-md-4 pr-sm-0 pr-md-0 pl-md-4 pl-sm-4 pl-0 pr-2"
                 >
@@ -2326,9 +2096,11 @@
                     />
                     <div>
                       <div class="product-component-name" title="Hoodie">
-                      {{product.name}}
+                        {{ product.name }}
                       </div>
-                      <div class="product-component-price">${{product.price}}</div>
+                      <div class="product-component-price">
+                        ${{ product.price }}
+                      </div>
                     </div>
                   </a>
                 </div>

@@ -1,0 +1,115 @@
+[
+  {
+    "id": "0",
+    "url": "https://demo.spreecommerce.org/t/women",
+    "banners": [
+      {
+        "name": "New collection",
+        "text": "Summer 2019",
+        "imageUrl": "assets/images/promo_banner_left-first-category-3165934932fa14ee8864585996e53d6ccddf04d839fe7a40527914050e0d3cfa.jpg"
+      },
+      {
+        "name": "Special offers",
+        "text": "Get up to 30% off",
+        "imageUrl": "assets/images/promo_banner_right-first-category-c4e12a80f130cf2a443b3222d1dab17a3239f79eb688a41306fcd38cbd13b2db.jpg"
+      }
+    ],
+    "name": "Women",
+    "categories": [
+      {
+        "name": "Skirts",
+        "url": "https://demo.spreecommerce.org/t/women/skirts"
+      },
+      {
+        "name": "Dresses",
+        "url": "https://demo.spreecommerce.org/t/women/dresses"
+      },
+      {
+        "name": "Shirts and Blouses",
+        "url": "https://demo.spreecommerce.org/t/women/shirts-and-blouses"
+      },
+      {
+        "name": "Sweaters",
+        "url": "https://demo.spreecommerce.org/t/women/sweaters"
+      },
+      {
+        "name": "Tops and T-shirts",
+        "url": "https://demo.spreecommerce.org/t/women/Tops-and-T-shirts"
+      },
+      {
+        "name": "Jackets and Coats",
+        "url": "https://demo.spreecommerce.org/t/women/jackets-and-coats"
+      }
+    ]
+  },
+  {
+    "id": "1",
+    "url": "https://demo.spreecommerce.org/t/men",
+    "banners": [
+      {
+        "name": "New collection",
+        "text": "Summer 2019",
+        "imageUrl": "assets/images/promo_banner_left-second-category-681dfee066c7008a570706c65a80a2cc6785ece292bac6ee5b0fc7d3f4142c3f.jpg",
+        "url": "https://demo.spreecommerce.org/t/men/new-collection/summer-collection"
+      },
+      {
+        "name": "Special offers",
+        "text": "Get up to 30% off",
+        "imageUrl": "assets/images/promo_banner_right-second-category-ce646eee4f79a7ff911baee6ed6f38e8f84c94a6354d45a9326f5ceeeff56d1c.jpg",
+        "url": "https://demo.spreecommerce.org/t/men/new-collection/special-offers"
+      }
+    ],
+    "name": "Men",
+    "categories": [
+      {
+        "name": "Shirts",
+        "url": "https://demo.spreecommerce.org/t/men/shirts"
+      },
+      {
+        "name": "T-shirts",
+        "url": "https://demo.spreecommerce.org/t/men/t-shirts"
+      },
+      {
+        "name": "Sweaters",
+        "url": "https://demo.spreecommerce.org/t/men/sweaters"
+      },
+      {
+        "name": "Jackets and Coats",
+        "url": "https://demo.spreecommerce.org/t/men/jackets-and-coats"
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "url": "https://demo.spreecommerce.org/t/sportswear",
+    "banners": [
+      {
+        "name": "New collection",
+        "text": "Summer 2019",
+        "imageUrl": "https://d9rok4vaowhj0.cloudfront.net/assets/meganav/promo_banner_left-third-category-3fa1d49caa21e7aea629b053b2337b6fc1677cbc0fd4176d2da0cfd3a40e2d3e.jpg",
+        "url": "https://demo.spreecommerce.org/t/sportswear/new-collection/summer-collection"
+      },
+      {
+        "name": "Special offers",
+        "text": "Get up to 30% off",
+        "imageUrl": "https://d9rok4vaowhj0.cloudfront.net/assets/meganav/promo_banner_right-third-category-c2f59ed45fb8e04522928ce255d6eb0a7c03dad5a4265f93bdca5c2c61b8bdf2.jpg",
+        "url": "https://demo.spreecommerce.org/t/sportswear/new-collection/special-offers"
+      }
+    ],
+    "name": "Sportswear",
+    "categories": [
+      {
+        "name": "Tops",
+        "url": "https://demo.spreecommerce.org/t/sportswear/Tops"
+      },
+      {
+        "name": "Sweatshirts",
+        "url": "https://demo.spreecommerce.org/t/sportswear/Sweatshirts"
+      },
+      {
+        "name": "Pants",
+        "url": "https://demo.spreecommerce.org/t/sportswear/Pants"
+      }
+    ]
+  }
+]
