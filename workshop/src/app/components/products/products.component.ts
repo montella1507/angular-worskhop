@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { transition, trigger, query, stagger, animate, style } from '@angular/animations';
 import { DataService } from 'src/app/services/data-service.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { combineLatest, Observable } from 'rxjs';
@@ -8,7 +9,24 @@ import { map, filter } from 'rxjs/operators';
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
-  styleUrls: ['./products.component.scss']
+  styleUrls: ['./products.component.scss'],
+  animations: [
+    trigger('listAnimation', [
+      transition('* => *', [ // each time the binding value changes
+        query(':leave', [
+          stagger(100, [
+            animate('0.2s', style({ opacity: 0 }))
+          ])
+        ], { optional: true }),
+        query(':enter', [
+          style({ opacity: 0 }),
+          stagger(100, [
+            animate('0.2s', style({ opacity: 1 }))
+          ])
+        ], { optional: true })
+      ])
+    ])
+  ]
 })
 export class ProductsComponent implements OnInit {
 
