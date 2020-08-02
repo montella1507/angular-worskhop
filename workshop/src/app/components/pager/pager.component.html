@@ -1,0 +1,98 @@
+<ul class="pagination mt-4">
+  <li
+    class="page page-item"
+    [class.active]="page === currentPage"
+    *ngFor="let page of pages"
+  >
+    <a class="page-link">{{ page }}</a>
+  </li>
+
+  <li class="next_page page-item">
+    <a
+      rel="next"
+      class="page-link"
+      href="https://demo.spreecommerce.org/t/men?page=2"
+      ><svg
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        width="13px"
+        height="16px"
+        viewBox="0 0 13.636 13.937"
+      >
+        <defs>
+          <clippath id="clip-path">
+            <rect width="8.636" height="13.937" fill="none"></rect>
+          </clippath>
+        </defs>
+        <g id="Group_426" data-name="Group 426" transform="translate(0)">
+          <g
+            id="left-arrow"
+            transform="translate(11.636 13.937) rotate(180)"
+            clip-path="url(#clip-path)"
+          >
+            <path
+              id="Path_8"
+              data-name="Path 8"
+              d="M39.273,18.731a.436.436,0,0,0,.617,0,.438.438,0,0,0,0-.618l-5.426-5.434,5.426-5.434a.437.437,0,0,0-.617-.618L33.528,12.37a.438.438,0,0,0,0,.618Z"
+              transform="translate(-32.4 -5.922)"
+              fill="#232323"
+              stroke="#232323"
+              stroke-width="0.5"
+            ></path>
+          </g>
+        </g>
+      </svg>
+    </a>
+  </li>
+
+  <li class="last next page-item">
+    <a class="page-link" href="https://demo.spreecommerce.org/t/men?page=3"
+      ><svg
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        width="13px"
+        height="16px"
+        viewBox="0 0 13.636 13.937"
+      >
+        <defs>
+          <clippath id="clip-path">
+            <rect width="8.636" height="13.937" fill="none"></rect>
+          </clippath>
+        </defs>
+        <g id="Group_426" data-name="Group 426" transform="translate(0)">
+          <g
+            id="left-arrow"
+            transform="translate(8.636 13.937) rotate(180)"
+            clip-path="url(#clip-path)"
+          >
+            <path
+              id="Path_8"
+              data-name="Path 8"
+              d="M39.273,18.731a.436.436,0,0,0,.617,0,.438.438,0,0,0,0-.618l-5.426-5.434,5.426-5.434a.437.437,0,0,0-.617-.618L33.528,12.37a.438.438,0,0,0,0,.618Z"
+              transform="translate(-32.4 -5.922)"
+              fill="#232323"
+              stroke="#232323"
+              stroke-width="0.5"
+            ></path>
+          </g>
+          <g
+            id="left-arrow-2"
+            data-name="left-arrow"
+            transform="translate(13.636 13.937) rotate(180)"
+            clip-path="url(#clip-path)"
+          >
+            <path
+              id="Path_8-2"
+              data-name="Path 8"
+              d="M39.273,18.731a.436.436,0,0,0,.617,0,.438.438,0,0,0,0-.618l-5.426-5.434,5.426-5.434a.437.437,0,0,0-.617-.618L33.528,12.37a.438.438,0,0,0,0,.618Z"
+              transform="translate(-32.4 -5.922)"
+              fill="#232323"
+              stroke="#232323"
+              stroke-width="0.5"
+            ></path>
+          </g>
+        </g>
+      </svg>
+    </a>
+  </li>
+</ul>

@@ -80,7 +80,7 @@
                       </ul>
                     </div>
                     <a
-                     *ngFor="let banner of category.banners"
+                      *ngFor="let banner of category.banners"
                       [href]="banner.url"
                     >
                       <div class="category-image text-center mx-3">
@@ -91,10 +91,10 @@
                         />
                         <div class="category-box">
                           <div class="category-box-small-text">
-                            {{banner.name}}
+                            {{ banner.name }}
                           </div>
                           <div class="category-box-big-text">
-                            {{banner.text}}
+                            {{ banner.text }}
                           </div>
                         </div>
                       </div>
@@ -2080,307 +2080,26 @@
             <div class="col-md-12 col-lg-9" data-hook="homepage_products">
               <div class="row">
                 <!-- MARIAN START -->
-                <div
+                <app-product-card
                   *ngFor="let product of products"
-                  [id]="product.id"
                   class="col-sm-4 col-6 mb-3 mb-md-4 pr-sm-0 pr-md-0 pl-md-4 pl-sm-4 pl-0 pr-2"
-                >
-                  <a
-                    class="h-100 d-flex flex-column justify-content-between"
-                    [href]="product.url"
-                  >
-                    <img
-                      class="product-component-image d-block mw-100 product-component-plp-image ls-is-cached lazyloaded"
-                      alt="Hoodie"
-                      [src]="product.imageUrl"
-                    />
-                    <div>
-                      <div class="product-component-name" title="Hoodie">
-                        {{ product.name }}
-                      </div>
-                      <div class="product-component-price">
-                        ${{ product.price }}
-                      </div>
-                    </div>
-                  </a>
-                </div>
+                  [id]="product.id"
+                  [imageUrl]="product.imageUrl"
+                  [name]="product.name"
+                  [url]="product.url"
+                  [price]="product.price"
+                ></app-product-card>
                 <!-- MARIAN END-->
               </div>
 
               <div class="row pl-md-4 pl-sm-4">
                 <div class="col-12">
                   <div class="plp-pagination d-none d-lg-flex">
-                    <ul class="pagination mt-4">
-                      <li class="page active page-item">
-                        <a
-                          class="page-link"
-                          href="https://demo.spreecommerce.org/t/men"
-                          >1</a
-                        >
-                      </li>
-
-                      <li class="page page-item">
-                        <a
-                          rel="next"
-                          class="page-link"
-                          href="https://demo.spreecommerce.org/t/men?page=2"
-                          >2</a
-                        >
-                      </li>
-
-                      <li class="page page-item">
-                        <a
-                          class="page-link"
-                          href="https://demo.spreecommerce.org/t/men?page=3"
-                          >3</a
-                        >
-                      </li>
-
-                      <li class="next_page page-item">
-                        <a
-                          rel="next"
-                          class="page-link"
-                          href="https://demo.spreecommerce.org/t/men?page=2"
-                          ><svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink"
-                            width="13px"
-                            height="16px"
-                            viewBox="0 0 13.636 13.937"
-                          >
-                            <defs>
-                              <clippath id="clip-path">
-                                <rect
-                                  width="8.636"
-                                  height="13.937"
-                                  fill="none"
-                                ></rect>
-                              </clippath>
-                            </defs>
-                            <g
-                              id="Group_426"
-                              data-name="Group 426"
-                              transform="translate(0)"
-                            >
-                              <g
-                                id="left-arrow"
-                                transform="translate(11.636 13.937) rotate(180)"
-                                clip-path="url(#clip-path)"
-                              >
-                                <path
-                                  id="Path_8"
-                                  data-name="Path 8"
-                                  d="M39.273,18.731a.436.436,0,0,0,.617,0,.438.438,0,0,0,0-.618l-5.426-5.434,5.426-5.434a.437.437,0,0,0-.617-.618L33.528,12.37a.438.438,0,0,0,0,.618Z"
-                                  transform="translate(-32.4 -5.922)"
-                                  fill="#232323"
-                                  stroke="#232323"
-                                  stroke-width="0.5"
-                                ></path>
-                              </g>
-                            </g>
-                          </svg>
-                        </a>
-                      </li>
-
-                      <li class="last next page-item">
-                        <a
-                          class="page-link"
-                          href="https://demo.spreecommerce.org/t/men?page=3"
-                          ><svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink"
-                            width="13px"
-                            height="16px"
-                            viewBox="0 0 13.636 13.937"
-                          >
-                            <defs>
-                              <clippath id="clip-path">
-                                <rect
-                                  width="8.636"
-                                  height="13.937"
-                                  fill="none"
-                                ></rect>
-                              </clippath>
-                            </defs>
-                            <g
-                              id="Group_426"
-                              data-name="Group 426"
-                              transform="translate(0)"
-                            >
-                              <g
-                                id="left-arrow"
-                                transform="translate(8.636 13.937) rotate(180)"
-                                clip-path="url(#clip-path)"
-                              >
-                                <path
-                                  id="Path_8"
-                                  data-name="Path 8"
-                                  d="M39.273,18.731a.436.436,0,0,0,.617,0,.438.438,0,0,0,0-.618l-5.426-5.434,5.426-5.434a.437.437,0,0,0-.617-.618L33.528,12.37a.438.438,0,0,0,0,.618Z"
-                                  transform="translate(-32.4 -5.922)"
-                                  fill="#232323"
-                                  stroke="#232323"
-                                  stroke-width="0.5"
-                                ></path>
-                              </g>
-                              <g
-                                id="left-arrow-2"
-                                data-name="left-arrow"
-                                transform="translate(13.636 13.937) rotate(180)"
-                                clip-path="url(#clip-path)"
-                              >
-                                <path
-                                  id="Path_8-2"
-                                  data-name="Path 8"
-                                  d="M39.273,18.731a.436.436,0,0,0,.617,0,.438.438,0,0,0,0-.618l-5.426-5.434,5.426-5.434a.437.437,0,0,0-.617-.618L33.528,12.37a.438.438,0,0,0,0,.618Z"
-                                  transform="translate(-32.4 -5.922)"
-                                  fill="#232323"
-                                  stroke="#232323"
-                                  stroke-width="0.5"
-                                ></path>
-                              </g>
-                            </g>
-                          </svg>
-                        </a>
-                      </li>
-                    </ul>
+                    <app-pager [pages]="[1,2,3]" [currentPage]="1"></app-pager>
                   </div>
 
                   <div class="plp-pagination d-lg-none">
-                    <ul class="pagination mt-4">
-                      <li class="page active page-item">
-                        <a
-                          class="page-link"
-                          href="https://demo.spreecommerce.org/t/men"
-                          >1</a
-                        >
-                      </li>
-
-                      <li class="page page-item">
-                        <a
-                          rel="next"
-                          class="page-link"
-                          href="https://demo.spreecommerce.org/t/men?page=2"
-                          >2</a
-                        >
-                      </li>
-
-                      <li class="page gap disabled page-item d-none d-lg-flex">
-                        <a
-                          href="https://demo.spreecommerce.org/t/men#"
-                          onclick="return false;"
-                          class="page-link"
-                        >
-                          …
-                        </a>
-                      </li>
-
-                      <li class="next_page page-item">
-                        <a
-                          rel="next"
-                          class="page-link"
-                          href="https://demo.spreecommerce.org/t/men?page=2"
-                          ><svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink"
-                            width="13px"
-                            height="16px"
-                            viewBox="0 0 13.636 13.937"
-                          >
-                            <defs>
-                              <clippath id="clip-path">
-                                <rect
-                                  width="8.636"
-                                  height="13.937"
-                                  fill="none"
-                                ></rect>
-                              </clippath>
-                            </defs>
-                            <g
-                              id="Group_426"
-                              data-name="Group 426"
-                              transform="translate(0)"
-                            >
-                              <g
-                                id="left-arrow"
-                                transform="translate(11.636 13.937) rotate(180)"
-                                clip-path="url(#clip-path)"
-                              >
-                                <path
-                                  id="Path_8"
-                                  data-name="Path 8"
-                                  d="M39.273,18.731a.436.436,0,0,0,.617,0,.438.438,0,0,0,0-.618l-5.426-5.434,5.426-5.434a.437.437,0,0,0-.617-.618L33.528,12.37a.438.438,0,0,0,0,.618Z"
-                                  transform="translate(-32.4 -5.922)"
-                                  fill="#232323"
-                                  stroke="#232323"
-                                  stroke-width="0.5"
-                                ></path>
-                              </g>
-                            </g>
-                          </svg>
-                        </a>
-                      </li>
-
-                      <li class="last next page-item">
-                        <a
-                          class="page-link"
-                          href="https://demo.spreecommerce.org/t/men?page=3"
-                          ><svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink"
-                            width="13px"
-                            height="16px"
-                            viewBox="0 0 13.636 13.937"
-                          >
-                            <defs>
-                              <clippath id="clip-path">
-                                <rect
-                                  width="8.636"
-                                  height="13.937"
-                                  fill="none"
-                                ></rect>
-                              </clippath>
-                            </defs>
-                            <g
-                              id="Group_426"
-                              data-name="Group 426"
-                              transform="translate(0)"
-                            >
-                              <g
-                                id="left-arrow"
-                                transform="translate(8.636 13.937) rotate(180)"
-                                clip-path="url(#clip-path)"
-                              >
-                                <path
-                                  id="Path_8"
-                                  data-name="Path 8"
-                                  d="M39.273,18.731a.436.436,0,0,0,.617,0,.438.438,0,0,0,0-.618l-5.426-5.434,5.426-5.434a.437.437,0,0,0-.617-.618L33.528,12.37a.438.438,0,0,0,0,.618Z"
-                                  transform="translate(-32.4 -5.922)"
-                                  fill="#232323"
-                                  stroke="#232323"
-                                  stroke-width="0.5"
-                                ></path>
-                              </g>
-                              <g
-                                id="left-arrow-2"
-                                data-name="left-arrow"
-                                transform="translate(13.636 13.937) rotate(180)"
-                                clip-path="url(#clip-path)"
-                              >
-                                <path
-                                  id="Path_8-2"
-                                  data-name="Path 8"
-                                  d="M39.273,18.731a.436.436,0,0,0,.617,0,.438.438,0,0,0,0-.618l-5.426-5.434,5.426-5.434a.437.437,0,0,0-.617-.618L33.528,12.37a.438.438,0,0,0,0,.618Z"
-                                  transform="translate(-32.4 -5.922)"
-                                  fill="#232323"
-                                  stroke="#232323"
-                                  stroke-width="0.5"
-                                ></path>
-                              </g>
-                            </g>
-                          </svg>
-                        </a>
-                      </li>
-                    </ul>
+                    <app-pager [pages]="[1,2,3]" [currentPage]="1"></app-pager>
                   </div>
                 </div>
               </div>
@@ -3924,70 +3643,16 @@
     <div
       class="row d-none d-xl-flex border-top py-5 text-uppercase footer-spree-menu-links"
     >
-      <div class="col-3">
-        <div class="footer-spree-label">
-          <a href="https://demo.spreecommerce.org/t/women">Women</a>
-        </div>
-        <div class="pt-2">
-          <a href="https://demo.spreecommerce.org/t/women/skirts">Skirts</a>
-        </div>
-        <div class="pt-2">
-          <a href="https://demo.spreecommerce.org/t/women/dresses">Dresses</a>
-        </div>
-        <div class="pt-2">
-          <a href="https://demo.spreecommerce.org/t/women/shirts-and-blouses"
-            >Shirts and Blouses</a
-          >
-        </div>
-        <div class="pt-2">
-          <a href="https://demo.spreecommerce.org/t/women/sweaters">Sweaters</a>
-        </div>
-        <div class="pt-2">
-          <a href="https://demo.spreecommerce.org/t/women/tops-and-t-shirts"
-            >Tops and T-shirts</a
-          >
-        </div>
-        <div class="pt-2">
-          <a href="https://demo.spreecommerce.org/t/women/jackets-and-coats"
-            >Jackets and Coats</a
-          >
-        </div>
+
+    <div class="col-3" *ngFor="let category of categories">
+      <div class="footer-spree-label">
+        <a [href]="category.url">{{category.name}}</a>
       </div>
-      <div class="col-3">
-        <div class="footer-spree-label">
-          <a href="https://demo.spreecommerce.org/t/men">Men</a>
-        </div>
-        <div class="pt-2">
-          <a href="https://demo.spreecommerce.org/t/men/shirts">Shirts</a>
-        </div>
-        <div class="pt-2">
-          <a href="https://demo.spreecommerce.org/t/men/t-shirts">T-shirts</a>
-        </div>
-        <div class="pt-2">
-          <a href="https://demo.spreecommerce.org/t/men/sweaters">Sweaters</a>
-        </div>
-        <div class="pt-2">
-          <a href="https://demo.spreecommerce.org/t/men/jackets-and-coats"
-            >Jackets and Coats</a
-          >
-        </div>
+      <div class="pt-2" *ngFor="let subcategory of category.categories">
+        <a [href]="subcategory.url">{{subcategory.name}}</a>
       </div>
-      <div class="col-3">
-        <div class="footer-spree-label">
-          <a href="https://demo.spreecommerce.org/t/sportswear">Sportswear</a>
-        </div>
-        <div class="pt-2">
-          <a href="https://demo.spreecommerce.org/t/sportswear/tops">Tops</a>
-        </div>
-        <div class="pt-2">
-          <a href="https://demo.spreecommerce.org/t/sportswear/sweatshirts"
-            >Sweatshirts</a
-          >
-        </div>
-        <div class="pt-2">
-          <a href="https://demo.spreecommerce.org/t/sportswear/pants">Pants</a>
-        </div>
-      </div>
+ 
+    </div>
       <div class="col-3">
         <div class="footer-spree-label">
           MY ACCOUNT
@@ -4000,47 +3665,5 @@
       </div>
     </div>
   </div>
-  <div class="border-top footer-spree-copyright">
-    <div class="container">
-      <div
-        class="d-flex flex-column flex-lg-row align-items-center justify-content-center py-3 footer-spree-copyright-content"
-      >
-        <div>Designed and developed by</div>
-        <div class="mb-1 mb-lg-0">
-          <a
-            target="blank"
-            aria-label="Go to Spark Solutions"
-            rel="follow"
-            href="https://sparksolutions.co/"
-          >
-            <img
-              class="footer-spree-copyright-logo-spark mx-2"
-              alt="Spree Commerce &amp; Ruby on Rails developers"
-              title="Spree Commerce &amp; Ruby on Rails developers"
-              src="assets/images/spark-logo@3x-9355f05da321d3e5fca20ae091dd6750de1dc395658ccb020db44d1c8106c19c.png"
-            />
-          </a>
-        </div>
-        <div class="d-none d-lg-inline-block mr-2">|</div>
-        <div>
-          © 2020
-          <a href="https://demo.spreecommerce.org/">Spree Demo Site</a>. All
-          rights reserved.
-        </div>
-      </div>
-    </div>
-  </div>
 </footer>
 
-<script>
-  window.addEventListener("turbolinks:load", function () {
-    Spree.translations = {
-      coupon_code_applied:
-        "The coupon code was successfully applied to your order.",
-      coupon_code_removed:
-        "The coupon code was successfully removed from your order.",
-      coupon_code_error_icon:
-        "https://d9rok4vaowhj0.cloudfront.net/assets/error-da45849628b080464441ec34889d6e7d039b4ef8179094304b1f3af165b6d849.svg",
-    };
-  });
-</script>
