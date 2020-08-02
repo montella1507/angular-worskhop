@@ -9,11 +9,11 @@ import { delay } from 'rxjs/operators';
 export class DataService {
 
 
-    categories$: BehaviorSubject<Pack<any>> = new BehaviorSubject<Pack<any>>({
+    categories$: BehaviorSubject<Pack<any[]>> = new BehaviorSubject<Pack<any[]>>({
         data: [],
         loading: true
     });
-    products$: BehaviorSubject<Pack<any>> = new BehaviorSubject<Pack<any>>({
+    products$: BehaviorSubject<Pack<any[]>> = new BehaviorSubject<Pack<any[]>>({
         loading: true,
         data: []
     });
@@ -26,7 +26,7 @@ export class DataService {
         return this.http.get('/assets/data/products.json')
             .pipe(delay(500))
             .subscribe(x => this.products$.next({
-                data: x,
+                data: x as any,
                 loading: false
             }));
     }
@@ -36,7 +36,7 @@ export class DataService {
             .pipe(delay(500))
             .subscribe(x => this.categories$.next({
                 loading: false,
-                data: x
+                data: x as any
             }));
     }
 }

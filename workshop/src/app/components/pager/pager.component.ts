@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-pager',
@@ -8,7 +8,13 @@ import { Component, OnInit, Input } from '@angular/core';
 export class PagerComponent implements OnInit {
 
   @Input() currentPage;
-  @Input() pages;
+  @Input() maxPage;
+
+  @Output() selected = new EventEmitter();
+
+  getPages() {
+    return Array.from({ length: this.maxPage }, (v, k) => k + 1)
+  }
   constructor() { }
 
   ngOnInit(): void {
