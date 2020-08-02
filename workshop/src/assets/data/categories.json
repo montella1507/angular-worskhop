@@ -1,7 +1,7 @@
 [
   {
     "id": "0",
-    "url": "https://demo.spreecommerce.org/t/women",
+    "url": "women",
     "banners": [
       {
         "name": "New collection",
@@ -15,36 +15,37 @@
       }
     ],
     "name": "Women",
+    
     "categories": [
       {
         "name": "Skirts",
-        "url": "https://demo.spreecommerce.org/t/women/skirts"
+        "url": "skirts"
       },
       {
         "name": "Dresses",
-        "url": "https://demo.spreecommerce.org/t/women/dresses"
+        "url": "dresses"
       },
       {
         "name": "Shirts and Blouses",
-        "url": "https://demo.spreecommerce.org/t/women/shirts-and-blouses"
+        "url": "shirts-and-blouses"
       },
       {
         "name": "Sweaters",
-        "url": "https://demo.spreecommerce.org/t/women/sweaters"
+        "url": "sweaters"
       },
       {
         "name": "Tops and T-shirts",
-        "url": "https://demo.spreecommerce.org/t/women/Tops-and-T-shirts"
+        "url": "Tops-and-T-shirts"
       },
       {
         "name": "Jackets and Coats",
-        "url": "https://demo.spreecommerce.org/t/women/jackets-and-coats"
+        "url": "jackets-and-coats"
       }
     ]
   },
   {
     "id": "1",
-    "url": "https://demo.spreecommerce.org/t/men",
+    "url": "men",
     "banners": [
       {
         "name": "New collection",
@@ -63,25 +64,25 @@
     "categories": [
       {
         "name": "Shirts",
-        "url": "https://demo.spreecommerce.org/t/men/shirts"
+        "url": "shirts"
       },
       {
         "name": "T-shirts",
-        "url": "https://demo.spreecommerce.org/t/men/t-shirts"
+        "url": "t-shirts"
       },
       {
         "name": "Sweaters",
-        "url": "https://demo.spreecommerce.org/t/men/sweaters"
+        "url": "sweaters"
       },
       {
         "name": "Jackets and Coats",
-        "url": "https://demo.spreecommerce.org/t/men/jackets-and-coats"
+        "url": "jackets-and-coats"
       }
     ]
   },
   {
     "id": "3",
-    "url": "https://demo.spreecommerce.org/t/sportswear",
+    "url": "sportswear",
     "banners": [
       {
         "name": "New collection",
@@ -100,15 +101,15 @@
     "categories": [
       {
         "name": "Tops",
-        "url": "https://demo.spreecommerce.org/t/sportswear/Tops"
+        "url": "tops"
       },
       {
         "name": "Sweatshirts",
-        "url": "https://demo.spreecommerce.org/t/sportswear/Sweatshirts"
+        "url": "sweatshirts"
       },
       {
         "name": "Pants",
-        "url": "https://demo.spreecommerce.org/t/sportswear/Pants"
+        "url": "pants"
       }
     ]
   }

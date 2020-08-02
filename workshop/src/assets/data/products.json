@@ -1,14 +1,14 @@
 [
   {
     "id": "product_84",
-    "url": "https://demo.spreecommerce.org/products/hoodie?taxon_id=4",
+    "url": "hoodie",
     "imageUrl": "assets/images/db-seeds-photos-products-Men-Sweaters-hoodie-grey-AdobeStock_123227130.jpg",
     "name": "Hoodie",
     "price": "32.99"
   },
   {
     "id": "product_85",
-    "url": "https://demo.spreecommerce.org/products/jumper?taxon_id=4",
+    "url": "jumper",
     "imageUrl": "assets/images/db-seeds-photos-products-Men-Sweaters-jumper-grey-AdobeStock_255963415.jpg",
     "name": "Jumper",
     "price": "25.99"
@@ -16,49 +16,49 @@
 
   {
     "id": "product_86",
-    "url": "https://demo.spreecommerce.org/products/stripped-jumper?taxon_id=4",
+    "url": "stripped-jumper",
     "imageUrl": "assets/images/db-seeds-photos-products-Men-Sweaters-stripped jumper-brown-AdobeStock_247210490.jpg",
     "name": " Stripped Jumper",
     "price": "78.99"
   },
   {
     "id": "product_87",
-    "url": "https://demo.spreecommerce.org/products/jumper?taxon_id=4",
+    "url": "zipped-high-neck-sweater",
     "imageUrl": "assets/images/db-seeds-photos-products-Men-Sweaters-zipped high neck sweater-green-iStock-1161124398.jpg",
     "name": "Zipped High Neck Sweater",
     "price": "47.99"
   },
   {
     "id": "product_88",
-    "url": "https://demo.spreecommerce.org/products/jumper?taxon_id=4",
+    "url": "long-sleeve-jumper-with-pocket",
     "imageUrl": "assets/images/db-seeds-photos-products-Men-Sweaters-long sleeve jumper with pocket-ecru-iStock-907860680.jpg",
     "name": "Long Sleeve Jumper With Pocket",
     "price": "11.99"
   },
   {
     "id": "product_89",
-    "url": "https://demo.spreecommerce.org/products/jumper?taxon_id=4",
+    "url": "neck-sweater",
     "imageUrl": "assets/images/db-seeds-photos-products-Men-Sweaters-high neck sweater-black-iStock-1080430468.jpg",
     "name": "   High Neck Sweater",
     "price": "95.99"
   },
   {
     "id": "product_90",
-    "url": "https://demo.spreecommerce.org/products/jumper?taxon_id=4",
+    "url": "long-sleeve-jumper",
     "imageUrl": "assets/images/db-seeds-photos-products-Men-Sweaters-long sleeve jumper-dark_blue-AdobeStock_256482162.jpg",
     "name": "Long Sleeve Jumper",
     "price": "81.99"
   },
   {
     "id": "product_91",
-    "url": "https://demo.spreecommerce.org/products/jumper?taxon_id=4",
+    "url": "long-sleeve-sweatshirt",
     "imageUrl": "assets/images/db-seeds-photos-products-Men-Sweaters-long sleeve sweatshirt-mint-AdobeStock_236183209.jpg",
     "name": "Long Sleeve Sweatshirt",
     "price": "89.99"
   },
   {
     "id": "product_92",
-    "url": "https://demo.spreecommerce.org/products/jumper?taxon_id=4",
+    "url": "man-basic-t-shirt",
     "imageUrl": "assets/images/db-seeds-photos-products-Men-T-shirts-basic t-shirt-white-AdobeStock_121795218.jpg",
     "name": "Man Basic T Shirt",
     "price": "49.99"

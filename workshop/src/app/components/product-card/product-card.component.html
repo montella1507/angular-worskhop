@@ -1,7 +1,7 @@
 
 <a
   class="h-100 d-flex flex-column justify-content-between"
-  [href]="url"
+  (click)="selected.emit(this.url)"
 >
   <img
     class="product-component-image d-block mw-100 product-component-plp-image ls-is-cached lazyloaded"

@@ -1,5 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { DataService } from './services/data-service.service';
+import { combineLatest } from 'rxjs';
+import { map } from 'rxjs/operators';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,25 +9,13 @@ import { DataService } from './services/data-service.service';
   encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
-  title = 'workshop';
-  products: any[];
-  categories: any[];
+
   constructor(
-    private dataService: DataService
+    public dataService: DataService
   ) {
-    this.loadProducts();
-    this.loadCategories();
+    this.dataService.loadProducts();
+    this.dataService.loadCategories();
   }
 
-  loadProducts() {
-    this.dataService.getProducts().subscribe(data => {
-      this.products = data;
-    });
-  }
 
-  loadCategories() {
-    this.dataService.getCategories().subscribe(data => {
-      this.categories = data;
-    });
-  }
 }

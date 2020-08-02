@@ -1,0 +1,795 @@
+<div id="spree-header" data-turbolinks-permanent="">
+  <header
+    id="header"
+    class="d-flex align-items-center header-spree border-bottom"
+  >
+    <div class="container-fluid h-100 header-spree-fluid">
+      <div class="d-flex flex-nowrap align-items-center h-100">
+        <div
+          class="d-xl-none flex-grow-1 header-spree-fluid-mobile-menu-toggler"
+        >
+          <button
+            class="navbar-toggler border-0 px-0 d-flex"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-label="Show menu"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="16px"
+              viewBox="0 0 18.855 16.808"
+              width="18.5px"
+              class="spree-icon"
+            >
+              <g fill="currentColor">
+                <path d="m0 0h18.855v2h-18.855z"></path>
+                <path
+                  d="m0 0h18.855v2h-18.855z"
+                  transform="translate(0 7.404)"
+                ></path>
+                <path
+                  d="m0 0h18.855v2h-18.855z"
+                  transform="translate(0 14.808)"
+                ></path>
+              </g>
+            </svg>
+          </button>
+        </div>
+        <figure
+          class="logo flex-grow-0 flex-xl-grow-1 order-xl-0 header-spree-fluid-logo m-0"
+        >
+          <a aria-label="Spree Demo Site" href="https://demo.spreecommerce.org/"
+            ><img
+              alt="Spree Demo Site"
+              title="Spree Demo Site"
+              src="./assets/images/logo-314aa0df77032e4088152ccce98323cf16a0bd5b0c77fa72595a7dc217807d0e.svg"
+          /></a>
+        </figure>
+        <div
+          id="main-nav-bar"
+          class="flex-grow-0 d-none d-xl-block h-100 header-spree-fluid-primary-navigation"
+        >
+          <ng-container *ngIf="dataService.categories$ | async as categories">
+            <app-loading *ngIf="categories.loading"></app-loading>
+            <ul class="nav h-100 main-nav-bar" *ngIf="!categories.loading">
+              <li
+                class="navbar main-nav-bar-dropdown main-nav-bar-category"
+                *ngFor="let category of categories.data"
+              >
+                <a
+                  class="p-2 main-nav-bar-item main-nav-bar-category-button"
+                  [routerLink]="['catalog', category.url, 'all']"
+                  >{{ category.name }}</a
+                >
+                <div class="w-100 shadow main-nav-bar-category-dropdown">
+                  <div
+                    class="container p-0 d-flex justify-content-xl-around mx-auto"
+                  >
+                    <div class="row">
+                      <div class="category-links">
+                        <div class="category-links-header text-uppercase">
+                          Categories
+                        </div>
+                        <ul class="pl-0">
+                          <li *ngFor="let subcategory of category.categories">
+                            <a
+                              class="text-uppercase main-nav-bar-category-links"
+                              [routerLink]="[
+                                'catalog',
+                                category.url,
+                                subcategory.url
+                              ]"
+                              >{{ subcategory.name }}</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                      <a *ngFor="let banner of category.banners">
+                        <div class="category-image text-center mx-3">
+                          <img
+                            class="lazyloaded"
+                            alt="Summer 2019"
+                            [src]="banner.imageUrl"
+                          />
+                          <div class="category-box">
+                            <div class="category-box-small-text">
+                              {{ banner.name }}
+                            </div>
+                            <div class="category-box-big-text">
+                              {{ banner.text }}
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </ng-container>
+        </div>
+        <div
+          id="top-nav-bar"
+          class="flex-grow-1 header-spree-fluid-secondary-navigation"
+        >
+          <ul
+            id="nav-bar"
+            class="nav align-items-center d-flex justify-content-end navbar-right"
+          >
+            <li>
+              <div class="navbar-right-search-menu">
+                <button
+                  type="button"
+                  class="navbar-right-dropdown-toggle search-icons"
+                  aria-label="Show search"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    height="36px"
+                    viewBox="0 0 23.286 23.291"
+                    width="36px"
+                    class="spree-icon d-none d-xl-inline-block"
+                  >
+                    <clippath>
+                      <path d="m0 0h23.286v23.291h-23.286z"></path>
+                    </clippath>
+                    <g clip-path="url(#a)">
+                      <path
+                        d="m23.134 22.1-5.66-5.66a9.939 9.939 0 1 0 -.981.981l5.66 5.66a.7.7 0 0 0 .491.207.68.68 0 0 0 .491-.207.7.7 0 0 0 -.001-.981zm-21.695-12.169a8.537 8.537 0 1 1 8.537 8.542 8.546 8.546 0 0 1 -8.537-8.542z"
+                        fill="currentColor"
+                        transform="translate(-.05)"
+                      ></path>
+                    </g>
+                  </svg>
+
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    height="24px"
+                    viewBox="0 0 23.286 23.291"
+                    width="24px"
+                    class="spree-icon d-xl-none"
+                  >
+                    <clippath>
+                      <path d="m0 0h23.286v23.291h-23.286z"></path>
+                    </clippath>
+                    <g clip-path="url(#a)">
+                      <path
+                        d="m23.134 22.1-5.66-5.66a9.939 9.939 0 1 0 -.981.981l5.66 5.66a.7.7 0 0 0 .491.207.68.68 0 0 0 .491-.207.7.7 0 0 0 -.001-.981zm-21.695-12.169a8.537 8.537 0 1 1 8.537 8.542 8.546 8.546 0 0 1 -8.537-8.542z"
+                        fill="currentColor"
+                        transform="translate(-.05)"
+                      ></path>
+                    </g>
+                  </svg>
+                </button>
+
+                <div
+                  id="search-dropdown"
+                  class="p-0 px-md-4 py-md-2 w-100 shadow navbar-right-search-menu-dropdown hide-on-esc"
+                >
+                  <form
+                    class="py-md-1 d-flex align-items-center"
+                    action="https://demo.spreecommerce.org/products"
+                    accept-charset="UTF-8"
+                    method="get"
+                  >
+                    <input
+                      type="search"
+                      name="keywords"
+                      id="keywords"
+                      placeholder="Search"
+                      autofocus="autofocus"
+                      class="border-0 p-3"
+                    />
+                    <label class="m-0">
+                      <input type="submit" />
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="20px"
+                        viewBox="0 0 20.286 20.291"
+                        width="20px"
+                        class="spree-icon d-md-none"
+                      >
+                        <path
+                          d="m20.161 19.256-4.931-4.931a8.659 8.659 0 1 0 -.855.855l4.931 4.931a.611.611 0 0 0 .427.18.593.593 0 0 0 .427-.18.608.608 0 0 0 .001-.855zm-18.901-10.604a7.437 7.437 0 1 1 7.44 7.441 7.445 7.445 0 0 1 -7.44-7.441z"
+                          transform="translate(-.05)"
+                        ></path>
+                      </svg>
+
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="27px"
+                        viewBox="0 0 20.286 20.291"
+                        width="27px"
+                        class="spree-icon d-none d-md-inline"
+                      >
+                        <path
+                          d="m20.161 19.256-4.931-4.931a8.659 8.659 0 1 0 -.855.855l4.931 4.931a.611.611 0 0 0 .427.18.593.593 0 0 0 .427-.18.608.608 0 0 0 .001-.855zm-18.901-10.604a7.437 7.437 0 1 1 7.44 7.441 7.445 7.445 0 0 1 -7.44-7.441z"
+                          transform="translate(-.05)"
+                        ></path>
+                      </svg>
+                    </label>
+                  </form>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="dropdown navbar-right-dropdown">
+                <button
+                  id="account-button"
+                  type="button"
+                  data-toggle="dropdown"
+                  class="navbar-right-dropdown-toggle"
+                  aria-label="Show user menu"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    height="36px"
+                    viewBox="0 0 22.964 22.964"
+                    width="41.4px"
+                    class="spree-icon d-none d-xl-inline-block"
+                  >
+                    <clippath>
+                      <path d="m0 0h22.964v22.964h-22.964z"></path>
+                    </clippath>
+                    <g clip-path="url(#a)">
+                      <path
+                        d="m21.34 16.507a14.758 14.758 0 0 0 -3.6-2.163 19.579 19.579 0 0 1 -2.765-1.544 9.709 9.709 0 0 0 2.407-5.837 9.174 9.174 0 0 0 -.7-4.212c-.637-1.251-2.053-2.751-5.2-2.751s-4.564 1.5-5.2 2.751a9.164 9.164 0 0 0 -.7 4.212 9.7 9.7 0 0 0 2.407 5.837 19.483 19.483 0 0 1 -2.766 1.544 14.769 14.769 0 0 0 -3.6 2.163 7.059 7.059 0 0 0 -1.623 4.514 1.913 1.913 0 0 0 1.913 1.943h19.137a1.914 1.914 0 0 0 1.914-1.943 7.061 7.061 0 0 0 -1.624-4.514zm.051 4.878a.478.478 0 0 1 -.341.143h-19.137a.478.478 0 0 1 -.34-.143.485.485 0 0 1 -.138-.343 5.731 5.731 0 0 1 1.2-3.52 14.581 14.581 0 0 1 3.227-1.9 15.74 15.74 0 0 0 3.109-1.785l.969-.916-.84-1.027a8.306 8.306 0 0 1 -2.083-4.931 7.934 7.934 0 0 1 .549-3.563c.658-1.3 1.974-1.962 3.916-1.962s3.258.662 3.918 1.962a7.938 7.938 0 0 1 .55 3.566 8.3 8.3 0 0 1 -2.086 4.931l-.841 1.034.969.915a15.774 15.774 0 0 0 3.108 1.782 14.517 14.517 0 0 1 3.227 1.9 5.593 5.593 0 0 1 1.2 3.52.478.478 0 0 1 -.136.338z"
+                        fill="currentColor"
+                      ></path>
+                    </g>
+                  </svg>
+
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    height="24px"
+                    viewBox="0 0 22.964 22.964"
+                    width="27.6px"
+                    class="spree-icon d-xl-none"
+                  >
+                    <clippath>
+                      <path d="m0 0h22.964v22.964h-22.964z"></path>
+                    </clippath>
+                    <g clip-path="url(#a)">
+                      <path
+                        d="m21.34 16.507a14.758 14.758 0 0 0 -3.6-2.163 19.579 19.579 0 0 1 -2.765-1.544 9.709 9.709 0 0 0 2.407-5.837 9.174 9.174 0 0 0 -.7-4.212c-.637-1.251-2.053-2.751-5.2-2.751s-4.564 1.5-5.2 2.751a9.164 9.164 0 0 0 -.7 4.212 9.7 9.7 0 0 0 2.407 5.837 19.483 19.483 0 0 1 -2.766 1.544 14.769 14.769 0 0 0 -3.6 2.163 7.059 7.059 0 0 0 -1.623 4.514 1.913 1.913 0 0 0 1.913 1.943h19.137a1.914 1.914 0 0 0 1.914-1.943 7.061 7.061 0 0 0 -1.624-4.514zm.051 4.878a.478.478 0 0 1 -.341.143h-19.137a.478.478 0 0 1 -.34-.143.485.485 0 0 1 -.138-.343 5.731 5.731 0 0 1 1.2-3.52 14.581 14.581 0 0 1 3.227-1.9 15.74 15.74 0 0 0 3.109-1.785l.969-.916-.84-1.027a8.306 8.306 0 0 1 -2.083-4.931 7.934 7.934 0 0 1 .549-3.563c.658-1.3 1.974-1.962 3.916-1.962s3.258.662 3.918 1.962a7.938 7.938 0 0 1 .55 3.566 8.3 8.3 0 0 1 -2.086 4.931l-.841 1.034.969.915a15.774 15.774 0 0 0 3.108 1.782 14.517 14.517 0 0 1 3.227 1.9 5.593 5.593 0 0 1 1.2 3.52.478.478 0 0 1 -.136.338z"
+                        fill="currentColor"
+                      ></path>
+                    </g>
+                  </svg>
+                </button>
+
+                <div
+                  id="link-to-account"
+                  class="dropdown-menu dropdown-menu-right text-right"
+                >
+                  <a
+                    class="dropdown-item"
+                    href="https://demo.spreecommerce.org/login"
+                    >LOG IN</a
+                  >
+                  <a
+                    class="dropdown-item"
+                    href="https://demo.spreecommerce.org/signup"
+                    >SIGN UP</a
+                  >
+                </div>
+              </div>
+            </li>
+            <li id="link-to-cart">
+              <a
+                class="cart-icon cart-icon--visible-count d-none d-xl-inline-block cart-icon--xl"
+                aria-label="Cart"
+                href="https://demo.spreecommerce.org/cart"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="36px"
+                  viewBox="0 0 82.6 91.7"
+                  width="36px"
+                  class="spree-icon"
+                >
+                  <g fill="currentColor">
+                    <path
+                      d="M33.6 73.3c0 0 0 0 0 0 -5 0-9.2 4.1-9.2 9.2 0 5 4.1 9.2 9.2 9.2 5 0 9.2-4.1 9.2-9.2 0 0 0 0 0 0 0-5-4.2-9.2-9.2-9.2Zm0 12.4c0 0 0 0 0 0 -1.8 0-3.3-1.5-3.3-3.3 0-1.8 1.5-3.3 3.3-3.3 1.8 0 3.3 1.5 3.3 3.3 0 1.8-1.5 3.3-3.3 3.3Z"
+                    ></path>
+                    <path
+                      d="M64.3 73.3c-5 0-9.2 4.1-9.2 9.2 0 5 4.1 9.2 9.2 9.2 5 0 9.2-4.1 9.2-9.2 0 0 0 0 0 0 0-5-4.2-9.2-9.2-9.2Zm0 12.4c-1.8 0-3.3-1.5-3.3-3.3 0-1.8 1.5-3.3 3.3-3.3 1.8 0 3.3 1.5 3.3 3.3 0 1.8-1.5 3.3-3.3 3.3Z"
+                    ></path>
+                    <path
+                      d="M82 31.3c-0.6-0.7-1.4-1.2-2.3-1.2l-59.2 0 -2.5-9.6c-0.3-1.3-1.5-2.2-2.9-2.2l-12.2 0c-1.6 0-3 1.3-3 3 0 1.6 1.3 3 3 3l9.9 0 2.5 9.5c0 0.1 0 0.1 0 0.2l9.2 35.3c0.3 1.3 1.5 2.2 2.9 2.2l43.1 0c1.3 0 2.5-0.9 2.9-2.2l9.2-35.3c0.2-0.9 0-1.8-0.5-2.6Zm-13.8 34.2l-38.5 0 -7.6-29.4 53.8 0 -7.6 29.4Z"
+                    ></path>
+                  </g>
+                </svg>
+
+                <div class="font-weight-medium cart-icon-count">0</div>
+              </a>
+              <a
+                class="cart-icon cart-icon--visible-count d-xl-none"
+                aria-label="Cart"
+                href="https://demo.spreecommerce.org/cart"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24px"
+                  viewBox="0 0 82.6 91.7"
+                  width="24px"
+                  class="spree-icon"
+                >
+                  <g fill="currentColor">
+                    <path
+                      d="M33.6 73.3c0 0 0 0 0 0 -5 0-9.2 4.1-9.2 9.2 0 5 4.1 9.2 9.2 9.2 5 0 9.2-4.1 9.2-9.2 0 0 0 0 0 0 0-5-4.2-9.2-9.2-9.2Zm0 12.4c0 0 0 0 0 0 -1.8 0-3.3-1.5-3.3-3.3 0-1.8 1.5-3.3 3.3-3.3 1.8 0 3.3 1.5 3.3 3.3 0 1.8-1.5 3.3-3.3 3.3Z"
+                    ></path>
+                    <path
+                      d="M64.3 73.3c-5 0-9.2 4.1-9.2 9.2 0 5 4.1 9.2 9.2 9.2 5 0 9.2-4.1 9.2-9.2 0 0 0 0 0 0 0-5-4.2-9.2-9.2-9.2Zm0 12.4c-1.8 0-3.3-1.5-3.3-3.3 0-1.8 1.5-3.3 3.3-3.3 1.8 0 3.3 1.5 3.3 3.3 0 1.8-1.5 3.3-3.3 3.3Z"
+                    ></path>
+                    <path
+                      d="M82 31.3c-0.6-0.7-1.4-1.2-2.3-1.2l-59.2 0 -2.5-9.6c-0.3-1.3-1.5-2.2-2.9-2.2l-12.2 0c-1.6 0-3 1.3-3 3 0 1.6 1.3 3 3 3l9.9 0 2.5 9.5c0 0.1 0 0.1 0 0.2l9.2 35.3c0.3 1.3 1.5 2.2 2.9 2.2l43.1 0c1.3 0 2.5-0.9 2.9-2.2l9.2-35.3c0.2-0.9 0-1.8-0.5-2.6Zm-13.8 34.2l-38.5 0 -7.6-29.4 53.8 0 -7.6 29.4Z"
+                    ></path>
+                  </g>
+                </svg>
+
+                <div class="font-weight-medium cart-icon-count">0</div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="position-fixed text-uppercase d-xl-none mobile-navigation">
+          <div class="d-flex align-items-center header-spree" data-hook="">
+            <div class="container-fluid header-spree-fluid">
+              <div class="d-flex flex-nowrap align-items-center">
+                <div class="d-xl-none flex-grow-1">
+                  <button
+                    id="mobile-navigation-back-button"
+                    aria-label="Go to previous menu"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="18px"
+                      viewBox="0 0 11.344 21.156"
+                      width="18px"
+                      class="spree-icon d-sm-none spree-icon-arrow spree-icon-arrow-left"
+                    >
+                      <path
+                        d="m42.617 25.669a.685.685 0 0 0 .968 0 .685.685 0 0 0 0-.968l-8.515-8.516 8.516-8.516a.685.685 0 0 0 -.968-.968l-9.017 9a.685.685 0 0 0 0 .968z"
+                        fill="currentColor"
+                        transform="matrix(-1 0 0 -1 44.744 26.869)"
+                      ></path>
+                    </svg>
+
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="28px"
+                      viewBox="0 0 11.344 21.156"
+                      width="17px"
+                      class="spree-icon d-none d-sm-inline spree-icon-arrow spree-icon-arrow-left"
+                    >
+                      <path
+                        d="m42.617 25.669a.685.685 0 0 0 .968 0 .685.685 0 0 0 0-.968l-8.515-8.516 8.516-8.516a.685.685 0 0 0 -.968-.968l-9.017 9a.685.685 0 0 0 0 .968z"
+                        fill="currentColor"
+                        transform="matrix(-1 0 0 -1 44.744 26.869)"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+                <figure
+                  class="logo flex-grow-0 flex-xl-grow-1 order-xl-0 header-spree-fluid-logo"
+                  data-hook=""
+                >
+                  <a
+                    aria-label="Spree Demo Site"
+                    href="https://demo.spreecommerce.org/"
+                    ><img
+                      alt="Spree Demo Site"
+                      title="Spree Demo Site"
+                      src="assets/images/logo-314aa0df77032e4088152ccce98323cf16a0bd5b0c77fa72595a7dc217807d0e.svg"
+                  /></a>
+                </figure>
+                <div
+                  id="top-nav-bar-mobile"
+                  class="text-right flex-grow-1 header-spree-fluid-secondary-navigation"
+                  data-hook=""
+                >
+                  <button
+                    id="mobile-navigation-close-button"
+                    aria-label="Close menu"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      height="17px"
+                      viewBox="0 0 16.351 16.351"
+                      width="17px"
+                      class="spree-icon d-sm-none"
+                    >
+                      <clippath>
+                        <path d="m0 0h16.351v16.351h-16.351z"></path>
+                      </clippath>
+                      <g clip-path="url(#a)" fill="currentColor">
+                        <path
+                          d="m0 0h21.96v1.165h-21.96z"
+                          transform="matrix(.70710678 .70710678 -.70710678 .70710678 .824243 .000101)"
+                        ></path>
+                        <path
+                          d="m0 0h21.96v1.165h-21.96z"
+                          transform="matrix(-.70710678 .70710678 -.70710678 -.70710678 16.350981 .823202)"
+                        ></path>
+                      </g>
+                    </svg>
+
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      height="26px"
+                      viewBox="0 0 16.351 16.351"
+                      width="26px"
+                      class="spree-icon d-none d-sm-inline"
+                    >
+                      <clippath>
+                        <path d="m0 0h16.351v16.351h-16.351z"></path>
+                      </clippath>
+                      <g clip-path="url(#a)" fill="currentColor">
+                        <path
+                          d="m0 0h21.96v1.165h-21.96z"
+                          transform="matrix(.70710678 .70710678 -.70710678 .70710678 .824243 .000101)"
+                        ></path>
+                        <path
+                          d="m0 0h21.96v1.165h-21.96z"
+                          transform="matrix(-.70710678 .70710678 -.70710678 -.70710678 16.350981 .823202)"
+                        ></path>
+                      </g>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <ul
+            class="list-unstyled position-relative h-100 mobile-navigation-list"
+          >
+            <li
+              class="d-flex justify-content-between align-items-center mobile-navigation-list-item"
+            >
+              <a class="w-75" href="https://demo.spreecommerce.org/t/women"
+                >Women</a
+              >
+
+              <a
+                class="w-25 text-right mobile-navigation-category-link"
+                data-category="women"
+                href="https://demo.spreecommerce.org/t/men#"
+                aria-label="Go to category"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="16px"
+                  viewBox="0 0 11.344 21.156"
+                  width="16px"
+                  class="spree-icon d-sm-none spree-icon-arrow spree-icon-arrow-right"
+                >
+                  <path
+                    d="m42.617 25.669a.685.685 0 0 0 .968 0 .685.685 0 0 0 0-.968l-8.515-8.516 8.516-8.516a.685.685 0 0 0 -.968-.968l-9.017 9a.685.685 0 0 0 0 .968z"
+                    fill="currentColor"
+                    transform="matrix(-1 0 0 -1 44.744 26.869)"
+                  ></path>
+                </svg>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="27px"
+                  viewBox="0 0 11.344 21.156"
+                  width="14px"
+                  class="spree-icon d-none d-sm-inline spree-icon-arrow spree-icon-arrow-right"
+                >
+                  <path
+                    d="m42.617 25.669a.685.685 0 0 0 .968 0 .685.685 0 0 0 0-.968l-8.515-8.516 8.516-8.516a.685.685 0 0 0 -.968-.968l-9.017 9a.685.685 0 0 0 0 .968z"
+                    fill="currentColor"
+                    transform="matrix(-1 0 0 -1 44.744 26.869)"
+                  ></path>
+                </svg>
+              </a>
+
+              <ul
+                class="list-unstyled position-absolute mobile-navigation-sublist"
+                data-category="women"
+              >
+                <li
+                  class="text-center font-weight-bold mobile-navigation-sublist-header"
+                >
+                  Women
+                </li>
+                <li
+                  class="d-flex justify-content-between align-items-center mobile-navigation-list-item"
+                >
+                  <a
+                    class="w-75"
+                    href="https://demo.spreecommerce.org/t/women/skirts"
+                    >Skirts</a
+                  >
+                </li>
+                <li
+                  class="d-flex justify-content-between align-items-center mobile-navigation-list-item"
+                >
+                  <a
+                    class="w-75"
+                    href="https://demo.spreecommerce.org/t/women/dresses"
+                    >Dresses</a
+                  >
+                </li>
+                <li
+                  class="d-flex justify-content-between align-items-center mobile-navigation-list-item"
+                >
+                  <a
+                    class="w-75"
+                    href="https://demo.spreecommerce.org/t/women/shirts-and-blouses"
+                    >Shirts and Blouses</a
+                  >
+                </li>
+                <li
+                  class="d-flex justify-content-between align-items-center mobile-navigation-list-item"
+                >
+                  <a
+                    class="w-75"
+                    href="https://demo.spreecommerce.org/t/women/sweaters"
+                    >Sweaters</a
+                  >
+                </li>
+                <li
+                  class="d-flex justify-content-between align-items-center mobile-navigation-list-item"
+                >
+                  <a
+                    class="w-75"
+                    href="https://demo.spreecommerce.org/t/women/tops-and-t-shirts"
+                    >Tops and T-shirts</a
+                  >
+                </li>
+                <li
+                  class="d-flex justify-content-between align-items-center mobile-navigation-list-item"
+                >
+                  <a
+                    class="w-75"
+                    href="https://demo.spreecommerce.org/t/women/jackets-and-coats"
+                    >Jackets and Coats</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li
+              class="d-flex justify-content-between align-items-center mobile-navigation-list-item"
+            >
+              <a class="w-75" href="https://demo.spreecommerce.org/t/men"
+                >Men</a
+              >
+
+              <a
+                class="w-25 text-right mobile-navigation-category-link"
+                data-category="men"
+                href="https://demo.spreecommerce.org/t/men#"
+                aria-label="Go to category"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="16px"
+                  viewBox="0 0 11.344 21.156"
+                  width="16px"
+                  class="spree-icon d-sm-none spree-icon-arrow spree-icon-arrow-right"
+                >
+                  <path
+                    d="m42.617 25.669a.685.685 0 0 0 .968 0 .685.685 0 0 0 0-.968l-8.515-8.516 8.516-8.516a.685.685 0 0 0 -.968-.968l-9.017 9a.685.685 0 0 0 0 .968z"
+                    fill="currentColor"
+                    transform="matrix(-1 0 0 -1 44.744 26.869)"
+                  ></path>
+                </svg>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="27px"
+                  viewBox="0 0 11.344 21.156"
+                  width="14px"
+                  class="spree-icon d-none d-sm-inline spree-icon-arrow spree-icon-arrow-right"
+                >
+                  <path
+                    d="m42.617 25.669a.685.685 0 0 0 .968 0 .685.685 0 0 0 0-.968l-8.515-8.516 8.516-8.516a.685.685 0 0 0 -.968-.968l-9.017 9a.685.685 0 0 0 0 .968z"
+                    fill="currentColor"
+                    transform="matrix(-1 0 0 -1 44.744 26.869)"
+                  ></path>
+                </svg>
+              </a>
+
+              <ul
+                class="list-unstyled position-absolute mobile-navigation-sublist"
+                data-category="men"
+              >
+                <li
+                  class="text-center font-weight-bold mobile-navigation-sublist-header"
+                >
+                  Men
+                </li>
+                <li
+                  class="d-flex justify-content-between align-items-center mobile-navigation-list-item"
+                >
+                  <a
+                    class="w-75"
+                    href="https://demo.spreecommerce.org/t/men/shirts"
+                    >Shirts</a
+                  >
+                </li>
+                <li
+                  class="d-flex justify-content-between align-items-center mobile-navigation-list-item"
+                >
+                  <a
+                    class="w-75"
+                    href="https://demo.spreecommerce.org/t/men/t-shirts"
+                    >T-shirts</a
+                  >
+                </li>
+                <li
+                  class="d-flex justify-content-between align-items-center mobile-navigation-list-item"
+                >
+                  <a
+                    class="w-75"
+                    href="https://demo.spreecommerce.org/t/men/sweaters"
+                    >Sweaters</a
+                  >
+                </li>
+                <li
+                  class="d-flex justify-content-between align-items-center mobile-navigation-list-item"
+                >
+                  <a
+                    class="w-75"
+                    href="https://demo.spreecommerce.org/t/men/jackets-and-coats"
+                    >Jackets and Coats</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li
+              class="d-flex justify-content-between align-items-center mobile-navigation-list-item"
+            >
+              <a class="w-75" href="https://demo.spreecommerce.org/t/sportswear"
+                >Sportswear</a
+              >
+
+              <a
+                class="w-25 text-right mobile-navigation-category-link"
+                data-category="sportswear"
+                href="https://demo.spreecommerce.org/t/men#"
+                aria-label="Go to category"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="16px"
+                  viewBox="0 0 11.344 21.156"
+                  width="16px"
+                  class="spree-icon d-sm-none spree-icon-arrow spree-icon-arrow-right"
+                >
+                  <path
+                    d="m42.617 25.669a.685.685 0 0 0 .968 0 .685.685 0 0 0 0-.968l-8.515-8.516 8.516-8.516a.685.685 0 0 0 -.968-.968l-9.017 9a.685.685 0 0 0 0 .968z"
+                    fill="currentColor"
+                    transform="matrix(-1 0 0 -1 44.744 26.869)"
+                  ></path>
+                </svg>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="27px"
+                  viewBox="0 0 11.344 21.156"
+                  width="14px"
+                  class="spree-icon d-none d-sm-inline spree-icon-arrow spree-icon-arrow-right"
+                >
+                  <path
+                    d="m42.617 25.669a.685.685 0 0 0 .968 0 .685.685 0 0 0 0-.968l-8.515-8.516 8.516-8.516a.685.685 0 0 0 -.968-.968l-9.017 9a.685.685 0 0 0 0 .968z"
+                    fill="currentColor"
+                    transform="matrix(-1 0 0 -1 44.744 26.869)"
+                  ></path>
+                </svg>
+              </a>
+
+              <ul
+                class="list-unstyled position-absolute mobile-navigation-sublist"
+                data-category="sportswear"
+              >
+                <li
+                  class="text-center font-weight-bold mobile-navigation-sublist-header"
+                >
+                  Sportswear
+                </li>
+                <li
+                  class="d-flex justify-content-between align-items-center mobile-navigation-list-item"
+                >
+                  <a
+                    class="w-75"
+                    href="https://demo.spreecommerce.org/t/sportswear/tops"
+                    >Tops</a
+                  >
+                </li>
+                <li
+                  class="d-flex justify-content-between align-items-center mobile-navigation-list-item"
+                >
+                  <a
+                    class="w-75"
+                    href="https://demo.spreecommerce.org/t/sportswear/sweatshirts"
+                    >Sweatshirts</a
+                  >
+                </li>
+                <li
+                  class="d-flex justify-content-between align-items-center mobile-navigation-list-item"
+                >
+                  <a
+                    class="w-75"
+                    href="https://demo.spreecommerce.org/t/sportswear/pants"
+                    >Pants</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+</div>
+
+<div id="overlay" class="overlay hide-on-esc"></div>
+
+<div data-hook="">
+  <main id="content" data-hook="">
+    <div class="taxon">
+      <div class="container">
+        <nav
+          id="breadcrumbs"
+          class="col-12 mt-1 mt-sm-3 mt-lg-4"
+          aria-label="breadcrumb"
+        >
+          <ol
+            class="breadcrumb"
+            itemscope="itemscope"
+            itemtype="https://schema.org/BreadcrumbList"
+          >
+            <li
+              itemscope="itemscope"
+              itemtype="https://schema.org/ListItem"
+              itemprop="itemListElement"
+              class="breadcrumb-item"
+            >
+              <a itemprop="url" href="https://demo.spreecommerce.org/"
+                ><span itemprop="name">Home</span
+                ><meta itemprop="position" content="0" /></a
+              ><span
+                itemprop="item"
+                itemscope="itemscope"
+                itemtype="https://schema.org/Thing"
+                itemid="/"
+              ></span>
+            </li>
+            <li
+              itemscope="itemscope"
+              itemtype="https://schema.org/ListItem"
+              itemprop="itemListElement"
+              class="breadcrumb-item"
+            >
+              <a itemprop="url" href="https://demo.spreecommerce.org/t/men"
+                ><span itemprop="name">Men</span
+                ><meta itemprop="position" content="1" /></a
+              ><span
+                itemprop="item"
+                itemscope="itemscope"
+                itemtype="https://schema.org/Thing"
+                itemid="/t/men"
+              ></span>
+            </li>
+          </ol>
+        </nav>
+        <div class="py-md-3 text-uppercase taxon-title">
+          Men
+        </div>
+      </div>
+      <router-outlet></router-outlet>
+    </div>
+  </main>
+</div>
