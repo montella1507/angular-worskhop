@@ -1,6 +1,7 @@
 [
   {
     "id": "product_84",
+    "description": "Suscipit dolorem harum commodi quasi facere. Cumque voluptatibus et eos hic excepturi adipisci sunt. Corrupti praesentium et voluptatem iste ut.",
     "url": "hoodie",
     "imageUrl": "assets/images/db-seeds-photos-products-Men-Sweaters-hoodie-grey-AdobeStock_123227130.jpg",
     "name": "Hoodie",
@@ -29,6 +30,7 @@
   },
   {
     "id": "product_85",
+    "description": "Suscipit dolorem harum commodi quasi facere. Cumque voluptatibus et eos hic excepturi adipisci sunt. Corrupti praesentium et voluptatem iste ut.",
     "url": "jumper",
     "imageUrl": "assets/images/db-seeds-photos-products-Men-Sweaters-jumper-grey-AdobeStock_255963415.jpg",
     "name": "Jumper",
@@ -58,6 +60,7 @@
 
   {
     "id": "product_86",
+    "description": "Suscipit dolorem harum commodi quasi facere. Cumque voluptatibus et eos hic excepturi adipisci sunt. Corrupti praesentium et voluptatem iste ut.",
     "url": "stripped-jumper",
     "imageUrl": "assets/images/db-seeds-photos-products-Men-Sweaters-stripped jumper-brown-AdobeStock_247210490.jpg",
     "name": " Stripped Jumper",
@@ -86,6 +89,7 @@
   },
   {
     "id": "product_87",
+    "description": "Suscipit dolorem harum commodi quasi facere. Cumque voluptatibus et eos hic excepturi adipisci sunt. Corrupti praesentium et voluptatem iste ut.",
     "url": "zipped-high-neck-sweater",
     "imageUrl": "assets/images/db-seeds-photos-products-Men-Sweaters-zipped high neck sweater-green-iStock-1161124398.jpg",
     "name": "Zipped High Neck Sweater",
@@ -114,6 +118,7 @@
   },
   {
     "id": "product_88",
+    "description": "Suscipit dolorem harum commodi quasi facere. Cumque voluptatibus et eos hic excepturi adipisci sunt. Corrupti praesentium et voluptatem iste ut.",
     "url": "long-sleeve-jumper-with-pocket",
     "imageUrl": "assets/images/db-seeds-photos-products-Men-Sweaters-long sleeve jumper with pocket-ecru-iStock-907860680.jpg",
     "name": "Long Sleeve Jumper With Pocket",
@@ -142,6 +147,7 @@
   },
   {
     "id": "product_89",
+    "description": "Suscipit dolorem harum commodi quasi facere. Cumque voluptatibus et eos hic excepturi adipisci sunt. Corrupti praesentium et voluptatem iste ut.",
     "url": "neck-sweater",
     "imageUrl": "assets/images/db-seeds-photos-products-Men-Sweaters-high neck sweater-black-iStock-1080430468.jpg",
     "name": "   High Neck Sweater",
@@ -170,6 +176,7 @@
   },
   {
     "id": "product_90",
+    "description": "Suscipit dolorem harum commodi quasi facere. Cumque voluptatibus et eos hic excepturi adipisci sunt. Corrupti praesentium et voluptatem iste ut.",
     "url": "long-sleeve-jumper",
     "imageUrl": "assets/images/db-seeds-photos-products-Men-Sweaters-long sleeve jumper-dark_blue-AdobeStock_256482162.jpg",
     "name": "Long Sleeve Jumper",
@@ -198,6 +205,7 @@
   },
   {
     "id": "product_91",
+    "description": "Suscipit dolorem harum commodi quasi facere. Cumque voluptatibus et eos hic excepturi adipisci sunt. Corrupti praesentium et voluptatem iste ut.",
     "url": "long-sleeve-sweatshirt",
     "imageUrl": "assets/images/db-seeds-photos-products-Men-Sweaters-long sleeve sweatshirt-mint-AdobeStock_236183209.jpg",
     "name": "Long Sleeve Sweatshirt",
@@ -226,6 +234,7 @@
   },
   {
     "id": "product_92",
+    "description": "Suscipit dolorem harum commodi quasi facere. Cumque voluptatibus et eos hic excepturi adipisci sunt. Corrupti praesentium et voluptatem iste ut.",
     "url": "man-basic-t-shirt",
     "imageUrl": "assets/images/db-seeds-photos-products-Men-T-shirts-basic t-shirt-white-AdobeStock_121795218.jpg",
     "name": "Man Basic T Shirt",

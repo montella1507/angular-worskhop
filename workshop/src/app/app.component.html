@@ -8,7 +8,7 @@
     <div class="row d-xl-flex justify-content-xl-around pb-xl-5">
       <div class="d-flex d-xl-block flex-xl-grow-0 col-xl-4">
         <figure class="logo mx-auto mx-xl-0 pt-xl-2 pb-xl-1">
-          <a aria-label="Spree Demo Site" href="https://demo.spreecommerce.org/"
+          <a aria-label="Spree Demo Site"
             ><img
               alt="Spree Demo Site"
               title="Spree Demo Site"
@@ -27,10 +27,7 @@
         </div>
         <div class="d-flex d-xl-block justify-content-center mx-auto">
           <div class="d-flex">
-            <a
-              target="blank"
-              rel="nofollow noopener"
-              href="https://facebook.com/sparksolutions.co/"
+            <a target="blank" rel="nofollow noopener"
               ><figure id="facebook" class="px-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -46,10 +43,7 @@
                   ></path>
                 </svg></figure
             ></a>
-            <a
-              target="blank"
-              rel="nofollow noopener"
-              href="https://twitter.com/sparksolution5?lang=en"
+            <a target="blank" rel="nofollow noopener"
               ><figure id="twitter" class="px-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -65,10 +59,7 @@
                   ></path>
                 </svg></figure
             ></a>
-            <a
-              target="blank"
-              rel="nofollow noopener"
-              href="https://instagram.com/spreecommerce/"
+            <a target="blank" rel="nofollow noopener"
               ><figure id="instagram" class="px-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -113,10 +104,14 @@
         <ng-container *ngIf="!categories.loading">
           <div class="col-3" *ngFor="let category of categories.data">
             <div class="footer-spree-label">
-              <a [href]="category.url">{{ category.name }}</a>
+              <a [routerLink]="['catalog', category.url, 'all']">{{
+                category.name
+              }}</a>
             </div>
             <div class="pt-2" *ngFor="let subcategory of category.categories">
-              <a [href]="subcategory.url">{{ subcategory.name }}</a>
+              <a [routerLink]="['catalog', category.url, subcategory.url]">{{
+                subcategory.name
+              }}</a>
             </div>
           </div>
           <div class="col-3">
@@ -124,9 +119,7 @@
               MY ACCOUNT
             </div>
             <div class="pt-2">
-              <a href="https://demo.spreecommerce.org/account#account-my-orders"
-                >MY ORDERS</a
-              >
+              <a>MY ORDERS</a>
             </div>
           </div>
         </ng-container>

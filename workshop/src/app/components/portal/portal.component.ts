@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/app/services/data-service.service';
+import { ActivatedRoute, ActivatedRouteSnapshot } from '@angular/router';
 
 @Component({
   selector: 'app-portal',
@@ -8,9 +9,19 @@ import { DataService } from 'src/app/services/data-service.service';
 })
 export class PortalComponent implements OnInit {
   constructor(
-    public dataService: DataService
+    public dataService: DataService,
+    public route: ActivatedRoute
   ) {}
 
+  getCategory(categories: any[], param) {
+    return categories.find(x => x.url === param);
+  }
+
+  getSubcategoryName(categories: any[], category, subcategory) {
+    const cat =  categories.find(x => x.url === category);
+    const subcat = cat ? cat.categories.find(x=> x.url === subcategory) : undefined;
+    return subcat?  subcat.name : 'ALL';
+  }
   ngOnInit(): void {
   }
 

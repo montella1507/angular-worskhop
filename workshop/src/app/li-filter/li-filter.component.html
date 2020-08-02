@@ -1,0 +1,15 @@
+<a *ngFor="let value of values" (click)="onValueSelected.emit(value)">
+  <div
+    class="d-inline-block text-uppercase py-1 px-2 m-1 plp-overlay-card-item"
+    [class.plp-overlay-card-item--selected]="selectedValue == value"
+  >
+    <ng-container
+      [ngTemplateOutlet]="customTemplate ? customTemplate : defaultTemplate"
+      [ngTemplateOutletContext]="{ $implicit: value, item: value }"
+    ></ng-container>
+  </div>
+</a>
+
+<ng-template #defaultTemplate let-item>
+  {{ item }}
+</ng-template>

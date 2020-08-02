@@ -1,0 +1,39 @@
+<a *ngFor="let color of colors" (click)="colorPicked.emit(color)">
+  <span class="d-inline-block mb-1">
+    <svg
+      class="color-select"
+      height="32"
+      viewBox="0 0 32 32"
+      width="32"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g class="color-select-border" fill="none" fill-rule="evenodd">
+        <circle
+          class="plp-overlay-color-item"
+          cx="16"
+          cy="16"
+          r="15"
+          stroke-width="2"
+        ></circle>
+        <g transform="translate(2 2)">
+          <circle
+            cx="14"
+            cy="14"
+            [attr.fill]="color"
+            fill-rule="evenodd"
+            r="12"
+          ></circle>
+          <circle
+            cx="14"
+            cy="14"
+            r="13"
+            [attr.stroke]="
+              selectedColor !== color ? '#fff' : 'black'
+            "
+            stroke-width="2"
+          ></circle>
+        </g>
+      </g>
+    </svg>
+  </span>
+</a>

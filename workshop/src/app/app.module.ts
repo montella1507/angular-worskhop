@@ -14,6 +14,8 @@ import { PortalComponent } from './components/portal/portal.component';
 import { ProductsComponent } from './components/products/products.component';
 import { DetailComponent } from './components/detail/detail.component';
 import { LoadingComponent } from './components/loading/loading.component';
+import { ColorPickerComponent } from './color-picker/color-picker.component';
+import { LiFilterComponent, LiFilterTemplateDirective } from './li-filter/li-filter.component';
 
 
 @NgModule({
@@ -26,7 +28,10 @@ import { LoadingComponent } from './components/loading/loading.component';
     PortalComponent,
     ProductsComponent,
     DetailComponent,
-    LoadingComponent
+    LoadingComponent,
+    ColorPickerComponent,
+    LiFilterComponent,
+    LiFilterTemplateDirective
   ],
   imports: [
     BrowserAnimationsModule,

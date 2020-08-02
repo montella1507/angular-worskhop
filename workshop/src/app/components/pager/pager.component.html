@@ -1,7 +1,7 @@
 <ul class="pagination mt-4">
   <li
     class="page page-item"
-    [class.active]="page === currentPage"
+    [class.active]="page == currentPage"
     *ngFor="let page of getPages()"
     (click)="selected.emit(page)"
   >
@@ -12,7 +12,6 @@
     <a
       rel="next"
       class="page-link"
-      href="https://demo.spreecommerce.org/t/men?page=2"
       ><svg
         xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -47,7 +46,7 @@
   </li>
 
   <li class="last next page-item">
-    <a class="page-link" href="https://demo.spreecommerce.org/t/men?page=3"
+    <a class="page-link" 
       ><svg
         xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink"

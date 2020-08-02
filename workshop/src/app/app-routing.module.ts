@@ -12,7 +12,7 @@ const routes: Routes = [
     component: PortalComponent,
     children: [
       {
-        path: 'catalog/:category/:subcategory/:id ',
+        path: 'catalog/:category/:subcategory/:product',
         component: DetailComponent
       },
       {

@@ -1,827 +1,23 @@
-<div class="container pt-4 product-details">
-  <div class="row" data-hook="product_show">
-    <div class="col-12 col-md-7 col-lg-7" data-hook="product_left_part">
-      <div
-        class="w-100 d-flex align-self-start justify-content-between product-details-images"
-        data-hook="product_left_part_wrap"
-      >
-        <div
-          class="d-none d-md-block product-details-thumbnails"
-          data-hook="product_thumbnails"
-        >
+<ng-container *ngIf="vm$ | async as vm">
+  <div class="container pt-4 product-details">
+    <app-loading *ngIf="vm.loading" style="display: table;"></app-loading>
+    <ng-container *ngIf="!vm.loading">
+      <div class="row" data-hook="product_show">
+        <div class="col-12 col-md-7 col-lg-7" data-hook="product_left_part">
           <div
-            id="productThumbnailsCarousel"
-            class="h-100 carousel slide d-flex flex-column carousel-vertically-animated product-thumbnails-carousel"
-            data-product-carousel-group-identifier="main-product-carousel"
-            data-variant-change-trigger-identifier="productCarousel"
-            data-product-carousel-per-page="5"
-            data-product-carousel-is-slave="true"
-            data-interval="false"
-            data-hook=""
+            class="w-100 d-flex align-self-start justify-content-between product-details-images"
+            data-hook="product_left_part_wrap"
           >
-            <div class="carousel-inner order-1 h-100">
-              <div
-                class="carousel-item product-thumbnails-carousel-item active"
-              >
-                <div class="h-100 d-flex flex-column justify-content-center">
-                  <div class="product-thumbnails-carousel-item-content py-1">
-                    <div
-                      class="product-thumbnails-carousel-item-single product-thumbnails-carousel-item-single--visible"
-                      data-product-carousel-to-slide="0"
-                      data-variant-is-master="false"
-                      data-variant-id="779"
-                    >
-                      <img
-                        class="d-block w-100 selected lazyloaded"
-                        alt="Dress With Belt"
-                        src="assets/images/db-seeds-photos-products-Women-Dresses-dress with belt-red-AdobeStock_252721485.jpg"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="product-thumbnails-carousel-item">
-                <div class="h-100 d-flex flex-column justify-content-center">
-                  <div
-                    class="product-thumbnails-carousel-item-content py-1"
-                  ></div>
-                </div>
-              </div>
-            </div>
-            <a
-              class="d-none d-sm-flex order-0 justify-content-center w-100 product-thumbnails-carousel-previous"
-              href="https://demo.spreecommerce.org/products/dress-with-belt?taxon_id=10#productThumbnailsCarousel"
-              role="button"
-              data-slide="prev"
-            >
-              <span aria-hidden="true">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="16px"
-                  viewBox="0 0 11.344 21.156"
-                  width="16px"
-                  class="spree-icon spree-icon-arrow spree-icon-arrow-up"
-                >
-                  <path
-                    d="m42.617 25.669a.685.685 0 0 0 .968 0 .685.685 0 0 0 0-.968l-8.515-8.516 8.516-8.516a.685.685 0 0 0 -.968-.968l-9.017 9a.685.685 0 0 0 0 .968z"
-                    fill="currentColor"
-                    transform="matrix(-1 0 0 -1 44.744 26.869)"
-                  ></path>
-                </svg>
-              </span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a
-              class="d-none d-sm-flex order-2 justify-content-center w-100 product-thumbnails-carousel-next"
-              href="https://demo.spreecommerce.org/products/dress-with-belt?taxon_id=10#productThumbnailsCarousel"
-              role="button"
-              data-slide="next"
-            >
-              <span aria-hidden="true">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="16px"
-                  viewBox="0 0 11.344 21.156"
-                  width="16px"
-                  class="spree-icon spree-icon-arrow spree-icon-arrow-down"
-                >
-                  <path
-                    d="m42.617 25.669a.685.685 0 0 0 .968 0 .685.685 0 0 0 0-.968l-8.515-8.516 8.516-8.516a.685.685 0 0 0 -.968-.968l-9.017 9a.685.685 0 0 0 0 .968z"
-                    fill="currentColor"
-                    transform="matrix(-1 0 0 -1 44.744 26.869)"
-                  ></path>
-                </svg>
-              </span>
-              <span class="sr-only">Next</span>
-            </a>
-          </div>
-        </div>
-        <div class="product-details-single" data-hook="product_images">
-          <div
-            id="productCarousel"
-            class="carousel slide product-carousel"
-            data-product-carousel-group-identifier="main-product-carousel"
-            data-variant-change-trigger-identifier="productCarousel"
-            data-interval="false"
-            data-hook=""
-          >
-            <a
-              class="d-none d-md-flex h-100 justify-content-center align-items-center product-carousel-control position-absolute product-carousel-control--previous"
-              href="https://demo.spreecommerce.org/products/dress-with-belt?taxon_id=10#productCarousel"
-              role="button"
-              data-slide="prev"
-            >
-              <span
-                class="d-flex justify-content-center align-items-center product-carousel-control-rounded"
-                aria-hidden="true"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="20px"
-                  viewBox="0 0 11.344 21.156"
-                  width="20px"
-                  class="spree-icon spree-icon-arrow spree-icon-arrow-left"
-                >
-                  <path
-                    d="m42.617 25.669a.685.685 0 0 0 .968 0 .685.685 0 0 0 0-.968l-8.515-8.516 8.516-8.516a.685.685 0 0 0 -.968-.968l-9.017 9a.685.685 0 0 0 0 .968z"
-                    fill="currentColor"
-                    transform="matrix(-1 0 0 -1 44.744 26.869)"
-                  ></path>
-                </svg>
-              </span>
-              <span class="sr-only">Previous</span>
-            </a>
-
-            <a
-              class="d-none d-md-flex h-100 justify-content-center align-items-center product-carousel-control position-absolute product-carousel-control--next"
-              href="https://demo.spreecommerce.org/products/dress-with-belt?taxon_id=10#productCarousel"
-              role="button"
-              data-slide="next"
-            >
-              <span
-                class="d-flex justify-content-center align-items-center product-carousel-control-rounded"
-                aria-hidden="true"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="20px"
-                  viewBox="0 0 11.344 21.156"
-                  width="20px"
-                  class="spree-icon spree-icon-arrow spree-icon-arrow-right"
-                >
-                  <path
-                    d="m42.617 25.669a.685.685 0 0 0 .968 0 .685.685 0 0 0 0-.968l-8.515-8.516 8.516-8.516a.685.685 0 0 0 -.968-.968l-9.017 9a.685.685 0 0 0 0 .968z"
-                    fill="currentColor"
-                    transform="matrix(-1 0 0 -1 44.744 26.869)"
-                  ></path>
-                </svg>
-              </span>
-              <span class="sr-only">Next</span>
-            </a>
-
-            <div class="carousel-inner">
-              <div
-                class="d-flex flex-row position-absolute product-carousel-overlay"
-              >
-                <div
-                  class="d-none d-lg-block product-carousel-overlay-modal-opener"
-                  data-toggle="modal"
-                  data-target="#picturesModal"
-                ></div>
-              </div>
-
-            </div>
-
-            <ul
-              class="d-sm-none carousel-indicators product-carousel-indicators"
-            >
-              <li
-                data-target="#productCarousel"
-                data-slide-to="0"
-                class="product-carousel-indicators-indicator product-carousel-indicators-indicator--visible active"
-              >
-                <img
-                  class="d-block lazyload"
-                  alt="Dress With Belt"
-                  src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20160%20200&#39;%3E%3C/svg%3E"
-                />
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-12 col-md-5" data-hook="product_right_part">
-      <div id="product-description" data-hook="product_right_part_wrap">
-        <h1 class="mt-3 mt-md-0 text-center text-md-left product-details-title">
-          Dress With Belt
-        </h1>
-        <div id="cart-form" data-hook="cart_form">
-          <template
-            class="availability-template availability-template-not-available-in-currency"
-          ></template>
-
-          <template
-            class="availability-template availability-template-in-stock"
-          ></template>
-
-          <template
-            class="availability-template availability-template-backorderable"
-          ></template>
-
-          <template
-            class="availability-template availability-template-out-of-stock"
-          ></template>
-
-          <form id="add-to-cart-form" class="add-to-cart-form">
             <div
-              id="inside-product-cart-form"
-              data-hook="inside_product_cart_form"
+              class="d-none d-md-block product-details-thumbnails"
+              data-hook="product_thumbnails"
             >
               <div
-                id="product-price"
-                class="mb-2 text-center text-md-left add-to-cart-form-price"
-                data-hook="product_price"
-              >
-                <span class="price selling" content="16.99">
-                  $16.99
-                </span>
-                <span content="USD"></span>
-              </div>
-
-              <div
-                class="text-center text-md-left add-to-cart-form-general-availability text-uppercase"
-              >
-                availability:
-                <span class="add-to-cart-form-general-availability-value"
-                  >In Stock</span
-                >
-              </div>
-
-              <hr />
-              <ul id="product-variants" class="product-variants">
-                <li>
-                  <div
-                    class="product-variants-variant product-variants-variant--color"
-                    data-option-type-id="1"
-                  >
-                    <span
-                      class="d-block mb-2 text-center text-md-left text-uppercase product-variants-variant-title"
-                    >
-                      Color
-                    </span>
-
-                    <div
-                      class="d-flex flex-wrap justify-content-center justify-content-md-start"
-                    >
-                      <ol
-                        class="d-flex flex-wrap product-variants-variant-values"
-                      >
-                        <li>
-                          <input
-                            type="radio"
-                            name="variant_option_value_id_1"
-                            id="variant_option_value_id_1_3"
-                            value="3"
-                            class="product-variants-variant-values-radio"
-                            data-option-type-index="0"
-                            data-presentation="#FF0000"
-                            data-variant-id="779"
-                            data-is-color="true"
-                            checked="checked"
-                          />
-
-                          <label
-                            class="m-1 m-sm-2 m-md-1 color-select-label"
-                            tabindex="0"
-                            aria-label="#FF0000"
-                            for="variant_option_value_id_1_3"
-                          >
-                            <svg
-                              class="color-select"
-                              height="32"
-                              viewBox="0 0 32 32"
-                              width="32"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <g
-                                class="color-select-border"
-                                fill="none"
-                                fill-rule="evenodd"
-                              >
-                                <circle
-                                  class="plp-overlay-color-item"
-                                  cx="16"
-                                  cy="16"
-                                  r="15"
-                                  stroke-width="2"
-                                ></circle>
-                                <g transform="translate(2 2)">
-                                  <circle
-                                    cx="14"
-                                    cy="14"
-                                    fill="#FF0000"
-                                    fill-rule="evenodd"
-                                    r="12"
-                                  ></circle>
-                                  <circle
-                                    cx="14"
-                                    cy="14"
-                                    r="13"
-                                    stroke="#fff"
-                                    stroke-width="2"
-                                  ></circle>
-                                </g>
-                              </g>
-                            </svg>
-                          </label>
-                        </li>
-                        <li>
-                          <input
-                            type="radio"
-                            name="variant_option_value_id_1"
-                            id="variant_option_value_id_1_9"
-                            value="9"
-                            class="product-variants-variant-values-radio"
-                            data-option-type-index="0"
-                            data-presentation="#A8003B"
-                            data-variant-id="794"
-                            data-is-color="true"
-                          />
-
-                          <label
-                            class="m-1 m-sm-2 m-md-1 color-select-label"
-                            tabindex="0"
-                            aria-label="#A8003B"
-                            for="variant_option_value_id_1_9"
-                          >
-                            <svg
-                              class="color-select"
-                              height="32"
-                              viewBox="0 0 32 32"
-                              width="32"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <g
-                                class="color-select-border"
-                                fill="none"
-                                fill-rule="evenodd"
-                              >
-                                <circle
-                                  class="plp-overlay-color-item"
-                                  cx="16"
-                                  cy="16"
-                                  r="15"
-                                  stroke-width="2"
-                                ></circle>
-                                <g transform="translate(2 2)">
-                                  <circle
-                                    cx="14"
-                                    cy="14"
-                                    fill="#A8003B"
-                                    fill-rule="evenodd"
-                                    r="12"
-                                  ></circle>
-                                  <circle
-                                    cx="14"
-                                    cy="14"
-                                    r="13"
-                                    stroke="#fff"
-                                    stroke-width="2"
-                                  ></circle>
-                                </g>
-                              </g>
-                            </svg>
-                          </label>
-                        </li>
-                      </ol>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="product-variants-variant" data-option-type-id="3">
-                    <span
-                      class="d-block mb-2 text-center text-md-left text-uppercase product-variants-variant-title"
-                    >
-                      Size
-                    </span>
-
-                    <div
-                      class="d-flex flex-wrap justify-content-center justify-content-md-start"
-                    >
-                      <ol
-                        class="d-flex flex-wrap product-variants-variant-values"
-                      >
-                        <li>
-                          <input
-                            type="radio"
-                            name="variant_option_value_id_3"
-                            id="variant_option_value_id_3_23"
-                            value="23"
-                            class="product-variants-variant-values-radio"
-                            data-option-type-index="1"
-                            data-presentation="XS"
-                            data-variant-id="779"
-                          />
-
-                          <label
-                            class="m-1 select-label"
-                            tabindex="0"
-                            aria-label="XS"
-                            for="variant_option_value_id_3_23"
-                          >
-                            <span>XS</span>
-                          </label>
-                        </li>
-                        <li>
-                          <input
-                            type="radio"
-                            name="variant_option_value_id_3"
-                            id="variant_option_value_id_3_24"
-                            value="24"
-                            class="product-variants-variant-values-radio"
-                            data-option-type-index="1"
-                            data-presentation="S"
-                            data-variant-id="782"
-                          />
-
-                          <label
-                            class="m-1 select-label"
-                            tabindex="0"
-                            aria-label="S"
-                            for="variant_option_value_id_3_24"
-                          >
-                            <span>S</span>
-                          </label>
-                        </li>
-                        <li>
-                          <input
-                            type="radio"
-                            name="variant_option_value_id_3"
-                            id="variant_option_value_id_3_25"
-                            value="25"
-                            class="product-variants-variant-values-radio"
-                            data-option-type-index="1"
-                            data-presentation="M"
-                            data-variant-id="785"
-                          />
-
-                          <label
-                            class="m-1 select-label"
-                            tabindex="0"
-                            aria-label="M"
-                            for="variant_option_value_id_3_25"
-                          >
-                            <span>M</span>
-                          </label>
-                        </li>
-                        <li>
-                          <input
-                            type="radio"
-                            name="variant_option_value_id_3"
-                            id="variant_option_value_id_3_26"
-                            value="26"
-                            class="product-variants-variant-values-radio"
-                            data-option-type-index="1"
-                            data-presentation="L"
-                            data-variant-id="788"
-                          />
-
-                          <label
-                            class="m-1 select-label"
-                            tabindex="0"
-                            aria-label="L"
-                            for="variant_option_value_id_3_26"
-                          >
-                            <span>L</span>
-                          </label>
-                        </li>
-                        <li>
-                          <input
-                            type="radio"
-                            name="variant_option_value_id_3"
-                            id="variant_option_value_id_3_27"
-                            value="27"
-                            class="product-variants-variant-values-radio"
-                            data-option-type-index="1"
-                            data-presentation="XL"
-                            data-variant-id="791"
-                          />
-
-                          <label
-                            class="m-1 select-label"
-                            tabindex="0"
-                            aria-label="XL"
-                            for="variant_option_value_id_3_27"
-                          >
-                            <span>XL</span>
-                          </label>
-                        </li>
-                      </ol>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="product-variants-variant" data-option-type-id="2">
-                    <span
-                      class="d-block mb-2 text-center text-md-left text-uppercase product-variants-variant-title"
-                    >
-                      Length
-                    </span>
-
-                    <div
-                      class="d-flex flex-wrap justify-content-center justify-content-md-start"
-                    >
-                      <ol
-                        class="d-flex flex-wrap product-variants-variant-values"
-                      >
-                        <li>
-                          <input
-                            type="radio"
-                            name="variant_option_value_id_2"
-                            id="variant_option_value_id_2_20"
-                            value="20"
-                            class="product-variants-variant-values-radio"
-                            data-option-type-index="2"
-                            data-presentation="Mini"
-                            data-variant-id="779"
-                          />
-
-                          <label
-                            class="m-1 select-label"
-                            tabindex="0"
-                            aria-label="Mini"
-                            for="variant_option_value_id_2_20"
-                          >
-                            <span>Mini</span>
-                          </label>
-                        </li>
-                        <li>
-                          <input
-                            type="radio"
-                            name="variant_option_value_id_2"
-                            id="variant_option_value_id_2_21"
-                            value="21"
-                            class="product-variants-variant-values-radio"
-                            data-option-type-index="2"
-                            data-presentation="Midi"
-                            data-variant-id="780"
-                          />
-
-                          <label
-                            class="m-1 select-label"
-                            tabindex="0"
-                            aria-label="Midi"
-                            for="variant_option_value_id_2_21"
-                          >
-                            <span>Midi</span>
-                          </label>
-                        </li>
-                        <li>
-                          <input
-                            type="radio"
-                            name="variant_option_value_id_2"
-                            id="variant_option_value_id_2_22"
-                            value="22"
-                            class="product-variants-variant-values-radio"
-                            data-option-type-index="2"
-                            data-presentation="Maxi"
-                            data-variant-id="781"
-                          />
-
-                          <label
-                            class="m-1 select-label"
-                            tabindex="0"
-                            aria-label="Maxi"
-                            for="variant_option_value_id_2_22"
-                          >
-                            <span>Maxi</span>
-                          </label>
-                        </li>
-                      </ol>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-
-              <input type="hidden" name="variant_id" id="variant_id" value="" />
-
-              <hr />
-              <div>
-                <div class="mb-5 mt-4">
-                  <div class="d-flex quantity-select mx-auto mx-md-0">
-                    <button
-                      name="button"
-                      type="button"
-                      class="border-right-0 flex-grow-0 flex-shrink-0 py-0 px-3 quantity-select-decrease"
-                    >
-                      -
-                    </button>
-                    <input
-                      type="number"
-                      name="quantity"
-                      id="quantity"
-                      value="1"
-                      min="1"
-                      class="p-0 flex-grow-1 flex-shrink-1 text-center form-control border-left-0 border-right-0 quantity-select-value"
-                      aria-label="Quantity"
-                    />
-                    <button
-                      name="button"
-                      type="button"
-                      class="border-left-0 flex-grow-0 flex-shrink-0 py-0 px-3 quantity-select-increase"
-                    >
-                      +
-                    </button>
-                  </div>
-                </div>
-
-                <button
-                  name="button"
-                  type="submit"
-                  class="btn btn-primary w-100 text-uppercase font-weight-bold add-to-cart-button"
-                  id="add-to-cart-button"
-                  disabled=""
-                >
-                  Add To Cart
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="pb-4 pt-md-5 row" data-hook="product_description">
-    <div class="col-12 col-md-7 col-lg-6">
-      <h3 class="pt-4 font-weight-bold text-uppercase product-details-subtitle">
-        Description
-      </h3>
-      <div
-        id="product-description-short"
-        class="m-0 text-break product-description"
-        data-hook="description"
-      >
-        Suscipit dolorem harum commodi quasi facere. Cumque voluptatibus et eos
-        hic excepturi adipisci sunt. Corrupti praesentium et voluptatem iste ut.
-      </div>
-
-      <div
-        id="product-description-long"
-        class="m-0 text-break product-description d-none"
-        data-hook="description"
-      >
-        Suscipit dolorem harum commodi quasi facere. Cumque voluptatibus et eos
-        hic excepturi adipisci sunt. Corrupti praesentium et voluptatem iste ut.
-      </div>
-    </div>
-    <div class="d-none d-lg-block col-lg-1"></div>
-    <div class="col-12 col-md-5" data-hook="product_properties">
-      <h3 class="pt-4 font-weight-bold text-uppercase product-details-subtitle">
-        Details
-      </h3>
-      <ul
-        id="product-properties"
-        class="m-0 list-unstyled product-properies"
-        data-hook=""
-      >
-        <li>
-          <span class="font-weight-bold text-break">Type:</span>
-          <span class="text-break">Women</span>
-        </li>
-        <li>
-          <span class="font-weight-bold text-break">Collection:</span>
-          <span class="text-break">Women</span>
-        </li>
-        <li>
-          <span class="font-weight-bold text-break">Manufacturer:</span>
-          <span class="text-break">Conditioned</span>
-        </li>
-        <li>
-          <span class="font-weight-bold text-break">Brand:</span>
-          <span class="text-break">Zeta</span>
-        </li>
-        <li>
-          <span class="font-weight-bold text-break">Material:</span>
-          <span class="text-break">90% Cotton 10% Elastan</span>
-        </li>
-        <li>
-          <span class="font-weight-bold text-break">Fit:</span>
-          <span class="text-break">Lose</span>
-        </li>
-        <li>
-          <span class="font-weight-bold text-break">Gender:</span>
-          <span class="text-break">Women's</span>
-        </li>
-        <li>
-          <span class="font-weight-bold text-break">Model:</span>
-          <span class="text-break">dresswithbelt_16.99</span>
-        </li>
-      </ul>
-    </div>
-    <div class="col-12" data-hook="promotions"></div>
-  </div>
-
-  <div id="no-product-available" class="no-product-available-dropdown">
-    <div class="p-0 justify-content-around mx-auto no-product-available">
-      <div
-        id="no-product-available-close-button"
-        class="d-flex no-product-available-icon"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-          height="16.351"
-          viewBox="0 0 16.351 16.351"
-          width="16.351"
-          class="w-100 h-100"
-        >
-          <clippath><path d="m0 0h16.351v16.351h-16.351z"></path></clippath>
-          <g clip-path="url(#a)" fill="currentColor">
-            <path
-              d="m0 0h21.96v1.165h-21.96z"
-              transform="matrix(.70710678 .70710678 -.70710678 .70710678 .824243 .000101)"
-            ></path>
-            <path
-              d="m0 0h21.96v1.165h-21.96z"
-              transform="matrix(-.70710678 .70710678 -.70710678 -.70710678 16.350981 .823202)"
-            ></path>
-          </g>
-        </svg>
-      </div>
-
-      <p class="no-product-available-header">
-        Oops!
-      </p>
-
-      <p class="no-product-available-text">
-        Sorry, it looks like some products are not available in selected
-        quantity.
-      </p>
-      <p></p>
-      <div
-        class="btn btn-primary text-uppercase font-weight-bold d-flex no-product-available-button"
-        id="no-product-available-hide-button"
-      >
-        <p class="d-flex m-auto no-product-available-button-text">
-          OK
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="picturesModal" tabindex="-1" role="dialog">
-    <div
-      class="modal-dialog--zoom modal-dialog mw-100 vh-100 mt-0 mb-0"
-      role="document"
-    >
-      <div class="modal-content h-100">
-        <div class="modal-body h-100">
-          <button
-            type="button"
-            class="close"
-            data-dismiss="modal"
-            aria-label="Close"
-          >
-            <span aria-hidden="true">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                height="16px"
-                viewBox="0 0 16.351 16.351"
-                width="16px"
-                class="spree-icon d-block d-lg-none"
-              >
-                <clippath>
-                  <path d="m0 0h16.351v16.351h-16.351z"></path>
-                </clippath>
-                <g clip-path="url(#a)" fill="currentColor">
-                  <path
-                    d="m0 0h21.96v1.165h-21.96z"
-                    transform="matrix(.70710678 .70710678 -.70710678 .70710678 .824243 .000101)"
-                  ></path>
-                  <path
-                    d="m0 0h21.96v1.165h-21.96z"
-                    transform="matrix(-.70710678 .70710678 -.70710678 -.70710678 16.350981 .823202)"
-                  ></path>
-                </g>
-              </svg>
-
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                height="30px"
-                viewBox="0 0 16.351 16.351"
-                width="30px"
-                class="spree-icon d-none d-lg-block"
-              >
-                <clippath>
-                  <path d="m0 0h16.351v16.351h-16.351z"></path>
-                </clippath>
-                <g clip-path="url(#a)" fill="currentColor">
-                  <path
-                    d="m0 0h21.96v1.165h-21.96z"
-                    transform="matrix(.70710678 .70710678 -.70710678 .70710678 .824243 .000101)"
-                  ></path>
-                  <path
-                    d="m0 0h21.96v1.165h-21.96z"
-                    transform="matrix(-.70710678 .70710678 -.70710678 -.70710678 16.350981 .823202)"
-                  ></path>
-                </g>
-              </svg>
-            </span>
-          </button>
-          <div
-            class="d-flex justify-content-center align-items-center product-details-images h-100"
-          >
-            <div class="h-100 d-none d-sm-block product-details-thumbnails">
-              <div
-                id="productModalThumbnailsCarousel"
+                id="productThumbnailsCarousel"
                 class="h-100 carousel slide d-flex flex-column carousel-vertically-animated product-thumbnails-carousel"
-                data-product-carousel-group-identifier="main-product-modal-carousel"
+                data-product-carousel-group-identifier="main-product-carousel"
                 data-variant-change-trigger-identifier="productCarousel"
-                data-product-carousel-per-page="4"
+                data-product-carousel-per-page="5"
                 data-product-carousel-is-slave="true"
                 data-interval="false"
                 data-hook=""
@@ -842,16 +38,9 @@
                           data-variant-is-master="false"
                           data-variant-id="779"
                         >
-                        <div
-                          class="product-thumbnails-carousel-item-single"
-                          data-product-carousel-to-slide="89"
-                          data-variant-is-master="false"
-                          data-variant-id="808"
-                        >
                           <img
-                            class="d-block w-100 lazyload"
-                            alt="Dress With Belt"
-                            src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%2057%2070&#39;%3E%3C/svg%3E"
+                            class="d-block w-100 selected lazyloaded"
+                            src="assets/images/db-seeds-photos-products-Women-Dresses-dress with belt-red-AdobeStock_252721485.jpg"
                           />
                         </div>
                       </div>
@@ -869,7 +58,7 @@
                 </div>
                 <a
                   class="d-none d-sm-flex order-0 justify-content-center w-100 product-thumbnails-carousel-previous"
-                  href="https://demo.spreecommerce.org/products/dress-with-belt?taxon_id=10#productModalThumbnailsCarousel"
+                  href="https://demo.spreecommerce.org/products/dress-with-belt?taxon_id=10#productThumbnailsCarousel"
                   role="button"
                   data-slide="prev"
                 >
@@ -892,7 +81,7 @@
                 </a>
                 <a
                   class="d-none d-sm-flex order-2 justify-content-center w-100 product-thumbnails-carousel-next"
-                  href="https://demo.spreecommerce.org/products/dress-with-belt?taxon_id=10#productModalThumbnailsCarousel"
+                  href="https://demo.spreecommerce.org/products/dress-with-belt?taxon_id=10#productThumbnailsCarousel"
                   role="button"
                   data-slide="next"
                 >
@@ -915,18 +104,18 @@
                 </a>
               </div>
             </div>
-            <div class="product-details-single">
+            <div class="product-details-single" data-hook="product_images">
               <div
-                id="productModalCarousel"
+                id="productCarousel"
                 class="carousel slide product-carousel"
-                data-product-carousel-group-identifier="main-product-modal-carousel"
+                data-product-carousel-group-identifier="main-product-carousel"
                 data-variant-change-trigger-identifier="productCarousel"
                 data-interval="false"
                 data-hook=""
               >
                 <a
                   class="d-none d-md-flex h-100 justify-content-center align-items-center product-carousel-control position-absolute product-carousel-control--previous"
-                  href="https://demo.spreecommerce.org/products/dress-with-belt?taxon_id=10#productModalCarousel"
+                  href="https://demo.spreecommerce.org/products/dress-with-belt?taxon_id=10#productCarousel"
                   role="button"
                   data-slide="prev"
                 >
@@ -953,7 +142,7 @@
 
                 <a
                   class="d-none d-md-flex h-100 justify-content-center align-items-center product-carousel-control position-absolute product-carousel-control--next"
-                  href="https://demo.spreecommerce.org/products/dress-with-belt?taxon_id=10#productModalCarousel"
+                  href="https://demo.spreecommerce.org/products/dress-with-belt?taxon_id=10#productCarousel"
                   role="button"
                   data-slide="next"
                 >
@@ -982,48 +171,598 @@
                   <div
                     class="d-flex flex-row position-absolute product-carousel-overlay"
                   >
-                    <div class="d-none d-lg-block"></div>
+                    <div
+                      class="d-none d-lg-block product-carousel-overlay-modal-opener"
+                      data-toggle="modal"
+                      data-target="#picturesModal"
+                    ></div>
                   </div>
-
-                  <div
-                    class="carousel-item product-carousel-item active"
-                    data-variant-is-master="false"
-                    data-variant-id="779"
-                  >
-                    <div class="product-carousel-item-squared">
-                      <img
-                        alt="Dress With Belt"
-                        class="d-block w-100"
-                        width="650"
-                        height="870"
-                        src="assets/images/db-seeds-photos-products-Women-Dresses-dress with belt-red-AdobeStock_252721485(2).jpg"
-                      />
-                    </div>
-                  </div>
-                
                 </div>
 
                 <ul
                   class="d-sm-none carousel-indicators product-carousel-indicators"
                 >
                   <li
-                    data-target="#productModalCarousel"
+                    data-target="#productCarousel"
                     data-slide-to="0"
                     class="product-carousel-indicators-indicator product-carousel-indicators-indicator--visible active"
                   >
                     <img
                       class="d-block lazyload"
-                      alt="Dress With Belt"
                       src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20160%20200&#39;%3E%3C/svg%3E"
                     />
                   </li>
-                
                 </ul>
               </div>
             </div>
           </div>
         </div>
+
+        <div class="col-12 col-md-5" data-hook="product_right_part">
+          <div id="product-description" data-hook="product_right_part_wrap">
+            <h1
+              class="mt-3 mt-md-0 text-center text-md-left product-details-title"
+            >
+              {{ vm.data.product.name }}
+            </h1>
+            <div id="cart-form" data-hook="cart_form">
+              <template
+                class="availability-template availability-template-not-available-in-currency"
+              ></template>
+
+              <template
+                class="availability-template availability-template-in-stock"
+              ></template>
+
+              <template
+                class="availability-template availability-template-backorderable"
+              ></template>
+
+              <template
+                class="availability-template availability-template-out-of-stock"
+              ></template>
+
+              <form id="add-to-cart-form" class="add-to-cart-form">
+                <div
+                  id="inside-product-cart-form"
+                  data-hook="inside_product_cart_form"
+                >
+                  <div
+                    id="product-price"
+                    class="mb-2 text-center text-md-left add-to-cart-form-price"
+                    data-hook="product_price"
+                  >
+                    <span class="price selling" content="16.99">
+                      ${{ vm.data.product.price }}
+                    </span>
+                    <span content="USD"></span>
+                  </div>
+
+                  <div
+                    class="text-center text-md-left add-to-cart-form-general-availability text-uppercase"
+                  >
+                    availability:
+                    <span class="add-to-cart-form-general-availability-value"
+                      >In Stock</span
+                    >
+                  </div>
+
+                  <hr />
+                  <ul id="product-variants" class="product-variants">
+                    <li>
+                      <div
+                        class="product-variants-variant product-variants-variant--color"
+                        data-option-type-id="1"
+                      >
+                        <span
+                          class="d-block mb-2 text-center text-md-left text-uppercase product-variants-variant-title"
+                        >
+                          Color
+                        </span>
+
+                        <div
+                          class="d-flex flex-wrap justify-content-center justify-content-md-start"
+                        >
+                          <app-color-picker
+                            [colors]="vm.data.product.filters.colors"
+                            [selectedColor]="selectedColor"
+                            (colorPicked)="selectedColor = $event"
+                          ></app-color-picker>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div
+                        class="product-variants-variant"
+                        data-option-type-id="3"
+                      >
+                        <span
+                          class="d-block mb-2 text-center text-md-left text-uppercase product-variants-variant-title"
+                        >
+                          Size
+                        </span>
+
+                        <div
+                          class="d-flex flex-wrap justify-content-center justify-content-md-start"
+                        >
+                          <app-li-filter
+                            [values]="vm.data.product.filters.sizes"
+                            [selectedValue]="selectedSize"
+                            (onValueSelected)="selectedSize = $event"
+                          ></app-li-filter>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div
+                        class="product-variants-variant"
+                        data-option-type-id="2"
+                      >
+                        <span
+                          class="d-block mb-2 text-center text-md-left text-uppercase product-variants-variant-title"
+                        >
+                          Length
+                        </span>
+
+                        <div
+                          class="d-flex flex-wrap justify-content-center justify-content-md-start"
+                        >
+                        <app-li-filter
+                        [values]="vm.data.product.filters.lengths"
+                        [selectedValue]="selectedLength"
+                        (onValueSelected)="selectedLength= $event"
+                      ></app-li-filter>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+
+                  <input
+                    type="hidden"
+                    name="variant_id"
+                    id="variant_id"
+                    value=""
+                  />
+
+                  <hr />
+                  <div>
+                    <div class="mb-5 mt-4">
+                      <div class="d-flex quantity-select mx-auto mx-md-0">
+                        <button
+                          name="button"
+                          type="button"
+                          class="border-right-0 flex-grow-0 flex-shrink-0 py-0 px-3 quantity-select-decrease"
+                        >
+                          -
+                        </button>
+                        <input
+                          type="number"
+                          name="quantity"
+                          id="quantity"
+                          value="1"
+                          min="1"
+                          class="p-0 flex-grow-1 flex-shrink-1 text-center form-control border-left-0 border-right-0 quantity-select-value"
+                          aria-label="Quantity"
+                        />
+                        <button
+                          name="button"
+                          type="button"
+                          class="border-left-0 flex-grow-0 flex-shrink-0 py-0 px-3 quantity-select-increase"
+                        >
+                          +
+                        </button>
+                      </div>
+                    </div>
+
+                    <button
+                      name="button"
+                      type="submit"
+                      class="btn btn-primary w-100 text-uppercase font-weight-bold add-to-cart-button"
+                      id="add-to-cart-button"
+                      disabled=""
+                    >
+                      Add To Cart
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+      <div class="pb-4 pt-md-5 row" data-hook="product_description">
+        <div class="col-12 col-md-7 col-lg-6">
+          <h3
+            class="pt-4 font-weight-bold text-uppercase product-details-subtitle"
+          >
+            Description
+          </h3>
+          <div
+            id="product-description-short"
+            class="m-0 text-break product-description"
+            data-hook="description"
+          >
+            {{vm.data.product.description}}
+          </div>
+
+          <div
+            id="product-description-long"
+            class="m-0 text-break product-description d-none"
+            data-hook="description"
+          >
+            Suscipit dolorem harum commodi quasi facere. Cumque voluptatibus et
+            eos hic excepturi adipisci sunt. Corrupti praesentium et voluptatem
+            iste ut.
+          </div>
+        </div>
+        <div class="d-none d-lg-block col-lg-1"></div>
+        <div class="col-12 col-md-5" data-hook="product_properties">
+          <h3
+            class="pt-4 font-weight-bold text-uppercase product-details-subtitle"
+          >
+            Details
+          </h3>
+          <ul
+            id="product-properties"
+            class="m-0 list-unstyled product-properies"
+            data-hook=""
+          >
+            <li>
+              <span class="font-weight-bold text-break">Type:</span>
+              <span class="text-break">Women</span>
+            </li>
+            <li>
+              <span class="font-weight-bold text-break">Collection:</span>
+              <span class="text-break">Women</span>
+            </li>
+            <li>
+              <span class="font-weight-bold text-break">Manufacturer:</span>
+              <span class="text-break">Conditioned</span>
+            </li>
+            <li>
+              <span class="font-weight-bold text-break">Brand:</span>
+              <span class="text-break">Zeta</span>
+            </li>
+            <li>
+              <span class="font-weight-bold text-break">Material:</span>
+              <span class="text-break">90% Cotton 10% Elastan</span>
+            </li>
+            <li>
+              <span class="font-weight-bold text-break">Fit:</span>
+              <span class="text-break">Lose</span>
+            </li>
+            <li>
+              <span class="font-weight-bold text-break">Gender:</span>
+              <span class="text-break">Women's</span>
+            </li>
+            <li>
+              <span class="font-weight-bold text-break">Model:</span>
+              <span class="text-break">dresswithbelt_16.99</span>
+            </li>
+          </ul>
+        </div>
+        <div class="col-12" data-hook="promotions"></div>
+      </div>
+
+      <div id="no-product-available" class="no-product-available-dropdown">
+        <div class="p-0 justify-content-around mx-auto no-product-available">
+          <div
+            id="no-product-available-close-button"
+            class="d-flex no-product-available-icon"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              height="16.351"
+              viewBox="0 0 16.351 16.351"
+              width="16.351"
+              class="w-100 h-100"
+            >
+              <clippath><path d="m0 0h16.351v16.351h-16.351z"></path></clippath>
+              <g clip-path="url(#a)" fill="currentColor">
+                <path
+                  d="m0 0h21.96v1.165h-21.96z"
+                  transform="matrix(.70710678 .70710678 -.70710678 .70710678 .824243 .000101)"
+                ></path>
+                <path
+                  d="m0 0h21.96v1.165h-21.96z"
+                  transform="matrix(-.70710678 .70710678 -.70710678 -.70710678 16.350981 .823202)"
+                ></path>
+              </g>
+            </svg>
+          </div>
+
+          <p class="no-product-available-header">
+            Oops!
+          </p>
+
+          <p class="no-product-available-text">
+            Sorry, it looks like some products are not available in selected
+            quantity.
+          </p>
+          <p></p>
+          <div
+            class="btn btn-primary text-uppercase font-weight-bold d-flex no-product-available-button"
+            id="no-product-available-hide-button"
+          >
+            <p class="d-flex m-auto no-product-available-button-text">
+              OK
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="picturesModal" tabindex="-1" role="dialog">
+        <div
+          class="modal-dialog--zoom modal-dialog mw-100 vh-100 mt-0 mb-0"
+          role="document"
+        >
+          <div class="modal-content h-100">
+            <div class="modal-body h-100">
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    height="16px"
+                    viewBox="0 0 16.351 16.351"
+                    width="16px"
+                    class="spree-icon d-block d-lg-none"
+                  >
+                    <clippath>
+                      <path d="m0 0h16.351v16.351h-16.351z"></path>
+                    </clippath>
+                    <g clip-path="url(#a)" fill="currentColor">
+                      <path
+                        d="m0 0h21.96v1.165h-21.96z"
+                        transform="matrix(.70710678 .70710678 -.70710678 .70710678 .824243 .000101)"
+                      ></path>
+                      <path
+                        d="m0 0h21.96v1.165h-21.96z"
+                        transform="matrix(-.70710678 .70710678 -.70710678 -.70710678 16.350981 .823202)"
+                      ></path>
+                    </g>
+                  </svg>
+
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    height="30px"
+                    viewBox="0 0 16.351 16.351"
+                    width="30px"
+                    class="spree-icon d-none d-lg-block"
+                  >
+                    <clippath>
+                      <path d="m0 0h16.351v16.351h-16.351z"></path>
+                    </clippath>
+                    <g clip-path="url(#a)" fill="currentColor">
+                      <path
+                        d="m0 0h21.96v1.165h-21.96z"
+                        transform="matrix(.70710678 .70710678 -.70710678 .70710678 .824243 .000101)"
+                      ></path>
+                      <path
+                        d="m0 0h21.96v1.165h-21.96z"
+                        transform="matrix(-.70710678 .70710678 -.70710678 -.70710678 16.350981 .823202)"
+                      ></path>
+                    </g>
+                  </svg>
+                </span>
+              </button>
+              <div
+                class="d-flex justify-content-center align-items-center product-details-images h-100"
+              >
+                <div class="h-100 d-none d-sm-block product-details-thumbnails">
+                  <div
+                    id="productModalThumbnailsCarousel"
+                    class="h-100 carousel slide d-flex flex-column carousel-vertically-animated product-thumbnails-carousel"
+                    data-product-carousel-group-identifier="main-product-modal-carousel"
+                    data-variant-change-trigger-identifier="productCarousel"
+                    data-product-carousel-per-page="4"
+                    data-product-carousel-is-slave="true"
+                    data-interval="false"
+                    data-hook=""
+                  >
+                    <div class="carousel-inner order-1 h-100">
+                      <div
+                        class="carousel-item product-thumbnails-carousel-item active"
+                      >
+                        <div
+                          class="h-100 d-flex flex-column justify-content-center"
+                        >
+                          <div
+                            class="product-thumbnails-carousel-item-content py-1"
+                          >
+                            <div
+                              class="product-thumbnails-carousel-item-single product-thumbnails-carousel-item-single--visible"
+                              data-product-carousel-to-slide="0"
+                              data-variant-is-master="false"
+                              data-variant-id="779"
+                            >
+                              <div
+                                class="product-thumbnails-carousel-item-single"
+                                data-product-carousel-to-slide="89"
+                                data-variant-is-master="false"
+                                data-variant-id="808"
+                              >
+                                <img
+                                  class="d-block w-100 lazyload"
+                                  src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%2057%2070&#39;%3E%3C/svg%3E"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="product-thumbnails-carousel-item">
+                          <div
+                            class="h-100 d-flex flex-column justify-content-center"
+                          >
+                            <div
+                              class="product-thumbnails-carousel-item-content py-1"
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+                      <a
+                        class="d-none d-sm-flex order-0 justify-content-center w-100 product-thumbnails-carousel-previous"
+                        href="https://demo.spreecommerce.org/products/dress-with-belt?taxon_id=10#productModalThumbnailsCarousel"
+                        role="button"
+                        data-slide="prev"
+                      >
+                        <span aria-hidden="true">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="16px"
+                            viewBox="0 0 11.344 21.156"
+                            width="16px"
+                            class="spree-icon spree-icon-arrow spree-icon-arrow-up"
+                          >
+                            <path
+                              d="m42.617 25.669a.685.685 0 0 0 .968 0 .685.685 0 0 0 0-.968l-8.515-8.516 8.516-8.516a.685.685 0 0 0 -.968-.968l-9.017 9a.685.685 0 0 0 0 .968z"
+                              fill="currentColor"
+                              transform="matrix(-1 0 0 -1 44.744 26.869)"
+                            ></path>
+                          </svg>
+                        </span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a
+                        class="d-none d-sm-flex order-2 justify-content-center w-100 product-thumbnails-carousel-next"
+                        href="https://demo.spreecommerce.org/products/dress-with-belt?taxon_id=10#productModalThumbnailsCarousel"
+                        role="button"
+                        data-slide="next"
+                      >
+                        <span aria-hidden="true">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="16px"
+                            viewBox="0 0 11.344 21.156"
+                            width="16px"
+                            class="spree-icon spree-icon-arrow spree-icon-arrow-down"
+                          >
+                            <path
+                              d="m42.617 25.669a.685.685 0 0 0 .968 0 .685.685 0 0 0 0-.968l-8.515-8.516 8.516-8.516a.685.685 0 0 0 -.968-.968l-9.017 9a.685.685 0 0 0 0 .968z"
+                              fill="currentColor"
+                              transform="matrix(-1 0 0 -1 44.744 26.869)"
+                            ></path>
+                          </svg>
+                        </span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="product-details-single">
+                    <div
+                      id="productModalCarousel"
+                      class="carousel slide product-carousel"
+                      data-product-carousel-group-identifier="main-product-modal-carousel"
+                      data-variant-change-trigger-identifier="productCarousel"
+                      data-interval="false"
+                      data-hook=""
+                    >
+                      <a
+                        class="d-none d-md-flex h-100 justify-content-center align-items-center product-carousel-control position-absolute product-carousel-control--previous"
+                        href="https://demo.spreecommerce.org/products/dress-with-belt?taxon_id=10#productModalCarousel"
+                        role="button"
+                        data-slide="prev"
+                      >
+                        <span
+                          class="d-flex justify-content-center align-items-center product-carousel-control-rounded"
+                          aria-hidden="true"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="20px"
+                            viewBox="0 0 11.344 21.156"
+                            width="20px"
+                            class="spree-icon spree-icon-arrow spree-icon-arrow-left"
+                          >
+                            <path
+                              d="m42.617 25.669a.685.685 0 0 0 .968 0 .685.685 0 0 0 0-.968l-8.515-8.516 8.516-8.516a.685.685 0 0 0 -.968-.968l-9.017 9a.685.685 0 0 0 0 .968z"
+                              fill="currentColor"
+                              transform="matrix(-1 0 0 -1 44.744 26.869)"
+                            ></path>
+                          </svg>
+                        </span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+
+                      <a
+                        class="d-none d-md-flex h-100 justify-content-center align-items-center product-carousel-control position-absolute product-carousel-control--next"
+                        href="https://demo.spreecommerce.org/products/dress-with-belt?taxon_id=10#productModalCarousel"
+                        role="button"
+                        data-slide="next"
+                      >
+                        <span
+                          class="d-flex justify-content-center align-items-center product-carousel-control-rounded"
+                          aria-hidden="true"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="20px"
+                            viewBox="0 0 11.344 21.156"
+                            width="20px"
+                            class="spree-icon spree-icon-arrow spree-icon-arrow-right"
+                          >
+                            <path
+                              d="m42.617 25.669a.685.685 0 0 0 .968 0 .685.685 0 0 0 0-.968l-8.515-8.516 8.516-8.516a.685.685 0 0 0 -.968-.968l-9.017 9a.685.685 0 0 0 0 .968z"
+                              fill="currentColor"
+                              transform="matrix(-1 0 0 -1 44.744 26.869)"
+                            ></path>
+                          </svg>
+                        </span>
+                        <span class="sr-only">Next</span>
+                      </a>
+
+                      <div class="carousel-inner">
+                        <div
+                          class="d-flex flex-row position-absolute product-carousel-overlay"
+                        >
+                          <div class="d-none d-lg-block"></div>
+                        </div>
+
+                        <div
+                          class="carousel-item product-carousel-item active"
+                          data-variant-is-master="false"
+                          data-variant-id="779"
+                        >
+                          <div class="product-carousel-item-squared">
+                            <img
+                              class="d-block w-100"
+                              width="650"
+                              height="870"
+                              src="assets/images/db-seeds-photos-products-Women-Dresses-dress with belt-red-AdobeStock_252721485(2).jpg"
+                            />
+                          </div>
+                        </div>
+                      </div>
+
+                      <ul
+                        class="d-sm-none carousel-indicators product-carousel-indicators"
+                      >
+                        <li
+                          data-target="#productModalCarousel"
+                          data-slide-to="0"
+                          class="product-carousel-indicators-indicator product-carousel-indicators-indicator--visible active"
+                        >
+                          <img
+                            class="d-block lazyload"
+                            src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20160%20200&#39;%3E%3C/svg%3E"
+                          />
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
   </div>
-</div>
+</ng-container>

@@ -13,11 +13,6 @@ import { map, filter } from 'rxjs/operators';
   animations: [
     trigger('listAnimation', [
       transition('* => *', [ // each time the binding value changes
-        query(':leave', [
-          stagger(100, [
-            animate('0.2s', style({ opacity: 0 }))
-          ])
-        ], { optional: true }),
         query(':enter', [
           style({ opacity: 0 }),
           stagger(100, [
@@ -78,6 +73,11 @@ export class ProductsComponent implements OnInit {
           if (queryParams.price) {
             filteredProducts = filteredProducts.filter(x => x.price < queryParams.price);
           }
+
+          if (queryParams.sort) {
+            filteredProducts = filteredProducts.sort((a,b) => queryParams.sort === 'ascendant' ? a.price - b.price : b.price - a.price);
+          }
+
 
 
           const maxPage = Math.floor(((filteredProducts.length * 1.0) / 6.0) + 1);
