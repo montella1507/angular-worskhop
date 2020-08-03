@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/app/services/data-service.service';
-import { ActivatedRoute, ActivatedRouteSnapshot } from '@angular/router';
+import { ActivatedRoute, ActivatedRouteSnapshot, Router } from '@angular/router';
 
 @Component({
   selector: 'app-portal',
@@ -10,9 +10,14 @@ import { ActivatedRoute, ActivatedRouteSnapshot } from '@angular/router';
 export class PortalComponent implements OnInit {
   constructor(
     public dataService: DataService,
-    public route: ActivatedRoute
+    public route: ActivatedRoute,
+    private router: Router
   ) {}
 
+  logout() {
+    localStorage.removeItem('user');
+    this.router.navigate(['/account/login']);
+  }
   getCategory(categories: any[], param) {
     return categories.find(x => x.url === param);
   }

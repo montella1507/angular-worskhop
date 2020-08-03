@@ -1,14 +1,19 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PortalComponent } from './components/portal/portal.component';
-import { AccountComponent } from './components/account/account.component';
+
 import { ProductsComponent } from './components/products/products.component';
 import { DetailComponent } from './components/detail/detail.component';
-import { LoginComponent } from './components/login/login.component';
+
+import { UserLoggedInGuard } from './guards/user-logged-in.guard';
+import { UserNotLoggedInGuard } from './guards/user-not-logged-in.guard';
 
 const routes: Routes = [
   {
     path: '',
+    canActivate: [
+      UserLoggedInGuard
+    ],
     component: PortalComponent,
     children: [
       {
@@ -21,7 +26,7 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: 'catalog/woman/all',
+        redirectTo: 'catalog/men/sweaters',
         pathMatch: 'full'
 
       }
@@ -29,20 +34,11 @@ const routes: Routes = [
   },
   {
     path: 'account',
-    component: AccountComponent,
-    children: [
-      {
-        path: 'login',
-        component: LoginComponent
-      },
-      {
-        path: '',
-        redirectTo: 'login',
-        pathMatch: 'full'
-      }
-    ]
+    canActivate: [
+      UserNotLoggedInGuard
+    ],
+    loadChildren: () => import('./account/account.module').then(x => x.AccountModule)
   }
-
 ];
 
 @NgModule({
