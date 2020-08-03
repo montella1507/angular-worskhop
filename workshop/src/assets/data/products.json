@@ -13,20 +13,9 @@
       "sizes": ["xl"],
       "lengths": ["midi", "maxi"]
     },
-    "images": {
-      "blue": [
-        "assets/images/db-seeds-photos-products-Men-Sweaters-hoodie-grey-AdobeStock_123227130.jpg"
-      ],
-      "red": [
-        "assets/images/db-seeds-photos-products-Men-Sweaters-hoodie-grey-AdobeStock_123227130.jpg"
-      ],
-      "orange": [
-        "assets/images/db-seeds-photos-products-Men-Sweaters-hoodie-grey-AdobeStock_123227130.jpg"
-      ],
-      "white": [
-        "assets/images/db-seeds-photos-products-Men-Sweaters-hoodie-grey-AdobeStock_123227130.jpg"
-      ]
-    }
+    "images": [
+      "assets/images/db-seeds-photos-products-Men-Sweaters-hoodie-grey-AdobeStock_123227130.jpg"
+    ]
   },
   {
     "id": "product_85",
@@ -42,20 +31,9 @@
       "sizes": ["xl"],
       "lengths": ["midi", "maxi"]
     },
-    "images": {
-      "blue": [
-        "assets/images/db-seeds-photos-products-Men-Sweaters-hoodie-grey-AdobeStock_123227130.jpg"
-      ],
-      "red": [
-        "assets/images/db-seeds-photos-products-Men-Sweaters-hoodie-grey-AdobeStock_123227130.jpg"
-      ],
-      "orange": [
-        "assets/images/db-seeds-photos-products-Men-Sweaters-hoodie-grey-AdobeStock_123227130.jpg"
-      ],
-      "white": [
-        "assets/images/db-seeds-photos-products-Men-Sweaters-hoodie-grey-AdobeStock_123227130.jpg"
-      ]
-    }
+    "images": [
+      "assets/images/db-seeds-photos-products-Men-Sweaters-hoodie-grey-AdobeStock_123227130.jpg"
+    ]
   },
 
   {
@@ -72,20 +50,9 @@
       "sizes": ["xl"],
       "lengths": ["midi", "maxi"]
     },
-    "images": {
-      "blue": [
-        "assets/images/db-seeds-photos-products-Men-Sweaters-hoodie-grey-AdobeStock_123227130.jpg"
-      ],
-      "red": [
-        "assets/images/db-seeds-photos-products-Men-Sweaters-hoodie-grey-AdobeStock_123227130.jpg"
-      ],
-      "orange": [
-        "assets/images/db-seeds-photos-products-Men-Sweaters-hoodie-grey-AdobeStock_123227130.jpg"
-      ],
-      "white": [
-        "assets/images/db-seeds-photos-products-Men-Sweaters-hoodie-grey-AdobeStock_123227130.jpg"
-      ]
-    }
+    "images": [
+      "assets/images/db-seeds-photos-products-Men-Sweaters-hoodie-grey-AdobeStock_123227130.jpg"
+    ]
   },
   {
     "id": "product_87",
@@ -101,20 +68,10 @@
       "sizes": ["xl"],
       "lengths": ["midi", "maxi"]
     },
-    "images": {
-      "blue": [
-        "assets/images/db-seeds-photos-products-Men-Sweaters-hoodie-grey-AdobeStock_123227130.jpg"
-      ],
-      "red": [
-        "assets/images/db-seeds-photos-products-Men-Sweaters-hoodie-grey-AdobeStock_123227130.jpg"
-      ],
-      "orange": [
-        "assets/images/db-seeds-photos-products-Men-Sweaters-hoodie-grey-AdobeStock_123227130.jpg"
-      ],
-      "white": [
-        "assets/images/db-seeds-photos-products-Men-Sweaters-hoodie-grey-AdobeStock_123227130.jpg"
-      ]
-    }
+    "images": [
+      "assets/images/db-seeds-photos-products-Men-Sweaters-hoodie-grey-AdobeStock_123227130.jpg",
+      "assets/images/db-seeds-photos-products-Men-Sweaters-hoodie-grey-AdobeStock_123227130.jpg"
+    ]
   },
   {
     "id": "product_88",
@@ -130,20 +87,9 @@
       "sizes": ["xl"],
       "lengths": ["midi", "maxi"]
     },
-    "images": {
-      "blue": [
-        "assets/images/db-seeds-photos-products-Men-Sweaters-hoodie-grey-AdobeStock_123227130.jpg"
-      ],
-      "red": [
-        "assets/images/db-seeds-photos-products-Men-Sweaters-hoodie-grey-AdobeStock_123227130.jpg"
-      ],
-      "orange": [
-        "assets/images/db-seeds-photos-products-Men-Sweaters-hoodie-grey-AdobeStock_123227130.jpg"
-      ],
-      "white": [
-        "assets/images/db-seeds-photos-products-Men-Sweaters-hoodie-grey-AdobeStock_123227130.jpg"
-      ]
-    }
+    "images": [
+      "assets/images/db-seeds-photos-products-Men-Sweaters-hoodie-grey-AdobeStock_123227130.jpg"
+    ]
   },
   {
     "id": "product_89",
@@ -159,20 +105,10 @@
       "sizes": ["xl"],
       "lengths": ["midi", "maxi"]
     },
-    "images": {
-      "blue": [
-        "assets/images/db-seeds-photos-products-Men-Sweaters-hoodie-grey-AdobeStock_123227130.jpg"
-      ],
-      "red": [
-        "assets/images/db-seeds-photos-products-Men-Sweaters-hoodie-grey-AdobeStock_123227130.jpg"
-      ],
-      "orange": [
-        "assets/images/db-seeds-photos-products-Men-Sweaters-hoodie-grey-AdobeStock_123227130.jpg"
-      ],
-      "white": [
-        "assets/images/db-seeds-photos-products-Men-Sweaters-hoodie-grey-AdobeStock_123227130.jpg"
-      ]
-    }
+    "images": [
+      "assets/images/db-seeds-photos-products-Men-Sweaters-hoodie-grey-AdobeStock_123227130.jpg",
+      "assets/images/db-seeds-photos-products-Men-Sweaters-hoodie-grey-AdobeStock_123227130.jpg"
+    ]
   },
   {
     "id": "product_90",
@@ -188,20 +124,10 @@
       "sizes": ["xl"],
       "lengths": ["midi", "maxi"]
     },
-    "images": {
-      "blue": [
-        "assets/images/db-seeds-photos-products-Men-Sweaters-hoodie-grey-AdobeStock_123227130.jpg"
-      ],
-      "red": [
-        "assets/images/db-seeds-photos-products-Men-Sweaters-hoodie-grey-AdobeStock_123227130.jpg"
-      ],
-      "orange": [
-        "assets/images/db-seeds-photos-products-Men-Sweaters-hoodie-grey-AdobeStock_123227130.jpg"
-      ],
-      "white": [
-        "assets/images/db-seeds-photos-products-Men-Sweaters-hoodie-grey-AdobeStock_123227130.jpg"
-      ]
-    }
+    "images": [
+      "assets/images/db-seeds-photos-products-Men-Sweaters-hoodie-grey-AdobeStock_123227130.jpg",
+      "assets/images/db-seeds-photos-products-Men-Sweaters-hoodie-grey-AdobeStock_123227130.jpg"
+    ]
   },
   {
     "id": "product_91",
@@ -217,20 +143,9 @@
       "sizes": ["xl"],
       "lengths": ["midi", "maxi"]
     },
-    "images": {
-      "blue": [
-        "assets/images/db-seeds-photos-products-Men-Sweaters-hoodie-grey-AdobeStock_123227130.jpg"
-      ],
-      "red": [
-        "assets/images/db-seeds-photos-products-Men-Sweaters-hoodie-grey-AdobeStock_123227130.jpg"
-      ],
-      "orange": [
-        "assets/images/db-seeds-photos-products-Men-Sweaters-hoodie-grey-AdobeStock_123227130.jpg"
-      ],
-      "white": [
-        "assets/images/db-seeds-photos-products-Men-Sweaters-hoodie-grey-AdobeStock_123227130.jpg"
-      ]
-    }
+    "images": [
+      "assets/images/db-seeds-photos-products-Men-Sweaters-hoodie-grey-AdobeStock_123227130.jpg"
+    ]
   },
   {
     "id": "product_92",
@@ -246,19 +161,8 @@
       "sizes": ["xl"],
       "lengths": ["midi", "maxi"]
     },
-    "images": {
-      "blue": [
-        "assets/images/db-seeds-photos-products-Men-Sweaters-hoodie-grey-AdobeStock_123227130.jpg"
-      ],
-      "red": [
-        "assets/images/db-seeds-photos-products-Men-Sweaters-hoodie-grey-AdobeStock_123227130.jpg"
-      ],
-      "orange": [
-        "assets/images/db-seeds-photos-products-Men-Sweaters-hoodie-grey-AdobeStock_123227130.jpg"
-      ],
-      "white": [
-        "assets/images/db-seeds-photos-products-Men-Sweaters-hoodie-grey-AdobeStock_123227130.jpg"
-      ]
-    }
+    "images": [
+      "assets/images/db-seeds-photos-products-Men-Sweaters-hoodie-grey-AdobeStock_123227130.jpg"
+    ]
   }
 ]

@@ -33,14 +33,13 @@
                         class="product-thumbnails-carousel-item-content py-1"
                       >
                         <div
+                          (click)="selectedImage = image"
+                          *ngFor="let image of vm.data.product.images"
                           class="product-thumbnails-carousel-item-single product-thumbnails-carousel-item-single--visible"
-                          data-product-carousel-to-slide="0"
-                          data-variant-is-master="false"
-                          data-variant-id="779"
                         >
                           <img
                             class="d-block w-100 selected lazyloaded"
-                            src="assets/images/db-seeds-photos-products-Women-Dresses-dress with belt-red-AdobeStock_252721485.jpg"
+                            [src]="image"
                           />
                         </div>
                       </div>
@@ -58,7 +57,6 @@
                 </div>
                 <a
                   class="d-none d-sm-flex order-0 justify-content-center w-100 product-thumbnails-carousel-previous"
-                  href="https://demo.spreecommerce.org/products/dress-with-belt?taxon_id=10#productThumbnailsCarousel"
                   role="button"
                   data-slide="prev"
                 >
@@ -81,7 +79,6 @@
                 </a>
                 <a
                   class="d-none d-sm-flex order-2 justify-content-center w-100 product-thumbnails-carousel-next"
-                  href="https://demo.spreecommerce.org/products/dress-with-belt?taxon_id=10#productThumbnailsCarousel"
                   role="button"
                   data-slide="next"
                 >
@@ -115,7 +112,6 @@
               >
                 <a
                   class="d-none d-md-flex h-100 justify-content-center align-items-center product-carousel-control position-absolute product-carousel-control--previous"
-                  href="https://demo.spreecommerce.org/products/dress-with-belt?taxon_id=10#productCarousel"
                   role="button"
                   data-slide="prev"
                 >
@@ -140,9 +136,18 @@
                   <span class="sr-only">Previous</span>
                 </a>
 
+                <div class="product-carousel-item-squared">
+                  <img
+                    alt="Dress With Belt"
+                    class="d-block w-100"
+                    width="475"
+                    height="594"
+                    [src]="selectedImage"
+                  />
+                </div>
+
                 <a
                   class="d-none d-md-flex h-100 justify-content-center align-items-center product-carousel-control position-absolute product-carousel-control--next"
-                  href="https://demo.spreecommerce.org/products/dress-with-belt?taxon_id=10#productCarousel"
                   role="button"
                   data-slide="next"
                 >
@@ -263,11 +268,49 @@
                         <div
                           class="d-flex flex-wrap justify-content-center justify-content-md-start"
                         >
-                          <app-color-picker
-                            [colors]="vm.data.product.filters.colors"
-                            [selectedColor]="selectedColor"
-                            (colorPicked)="selectedColor = $event"
-                          ></app-color-picker>
+                          <app-li-filter  [values]="vm.data.product.filters.colors" [selectedValue]="selectedColor" (onValueSelected)="selectedColor = $event">
+                            <ng-template liFilterTemplate let-value let-selectedValue>
+                              <a>
+                                <span class="d-inline-block mb-1">
+                                  <svg
+                                    class="color-select"
+                                    height="32"
+                                    viewBox="0 0 32 32"
+                                    width="32"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <g class="color-select-border" fill="none" fill-rule="evenodd">
+                                      <circle
+                                        class="plp-overlay-color-item"
+                                        cx="16"
+                                        cy="16"
+                                        r="15"
+                                        stroke-width="2"
+                                      ></circle>
+                                      <g transform="translate(2 2)">
+                                        <circle
+                                          cx="14"
+                                          cy="14"
+                                          [attr.fill]="value"
+                                          fill-rule="evenodd"
+                                          r="12"
+                                        ></circle>
+                                        <circle
+                                          cx="14"
+                                          cy="14"
+                                          r="13"
+                                          [attr.stroke]="
+                                          selectedValue !== value ? '#fff' : 'black'
+                                          "
+                                          stroke-width="2"
+                                        ></circle>
+                                      </g>
+                                    </g>
+                                  </svg>
+                                </span>
+                              </a>
+                            </ng-template>
+                          </app-li-filter>
                         </div>
                       </div>
                     </li>
@@ -307,11 +350,11 @@
                         <div
                           class="d-flex flex-wrap justify-content-center justify-content-md-start"
                         >
-                        <app-li-filter
-                        [values]="vm.data.product.filters.lengths"
-                        [selectedValue]="selectedLength"
-                        (onValueSelected)="selectedLength= $event"
-                      ></app-li-filter>
+                          <app-li-filter
+                            [values]="vm.data.product.filters.lengths"
+                            [selectedValue]="selectedLength"
+                            (onValueSelected)="selectedLength = $event"
+                          ></app-li-filter>
                         </div>
                       </div>
                     </li>
@@ -382,7 +425,7 @@
             class="m-0 text-break product-description"
             data-hook="description"
           >
-            {{vm.data.product.description}}
+            {{ vm.data.product.description }}
           </div>
 
           <div
@@ -589,6 +632,7 @@
                                 data-variant-is-master="false"
                                 data-variant-id="808"
                               >
+                                muhehe
                                 <img
                                   class="d-block w-100 lazyload"
                                   src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%2057%2070&#39;%3E%3C/svg%3E"
@@ -609,7 +653,6 @@
                       </div>
                       <a
                         class="d-none d-sm-flex order-0 justify-content-center w-100 product-thumbnails-carousel-previous"
-                        href="https://demo.spreecommerce.org/products/dress-with-belt?taxon_id=10#productModalThumbnailsCarousel"
                         role="button"
                         data-slide="prev"
                       >
@@ -630,9 +673,9 @@
                         </span>
                         <span class="sr-only">Previous</span>
                       </a>
+
                       <a
                         class="d-none d-sm-flex order-2 justify-content-center w-100 product-thumbnails-carousel-next"
-                        href="https://demo.spreecommerce.org/products/dress-with-belt?taxon_id=10#productModalThumbnailsCarousel"
                         role="button"
                         data-slide="next"
                       >
@@ -666,7 +709,6 @@
                     >
                       <a
                         class="d-none d-md-flex h-100 justify-content-center align-items-center product-carousel-control position-absolute product-carousel-control--previous"
-                        href="https://demo.spreecommerce.org/products/dress-with-belt?taxon_id=10#productModalCarousel"
                         role="button"
                         data-slide="prev"
                       >
@@ -693,7 +735,6 @@
 
                       <a
                         class="d-none d-md-flex h-100 justify-content-center align-items-center product-carousel-control position-absolute product-carousel-control--next"
-                        href="https://demo.spreecommerce.org/products/dress-with-belt?taxon_id=10#productModalCarousel"
                         role="button"
                         data-slide="next"
                       >
@@ -732,10 +773,11 @@
                         >
                           <div class="product-carousel-item-squared">
                             <img
+                              alt="Dress With Belt"
                               class="d-block w-100"
-                              width="650"
-                              height="870"
-                              src="assets/images/db-seeds-photos-products-Women-Dresses-dress with belt-red-AdobeStock_252721485(2).jpg"
+                              width="475"
+                              height="594"
+                              src="https://demo.spreecommerce.org/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBbEVKIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f089d6bada803cdf8b9126b8037496f89290f7b4/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lOTmpBd2VEWXdNRDRHT2daRlZBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--c65060c318edf4445722e4e67ef6fbb84d8dcbc8/db-seeds-photos-products-Women-Dresses-dress%20with%20belt-red-AdobeStock_252721485.jpg"
                             />
                           </div>
                         </div>

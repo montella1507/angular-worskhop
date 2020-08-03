@@ -5,7 +5,7 @@
   >
     <ng-container
       [ngTemplateOutlet]="customTemplate ? customTemplate : defaultTemplate"
-      [ngTemplateOutletContext]="{ $implicit: value, item: value }"
+      [ngTemplateOutletContext]="{ $implicit: value, item: value, selectedValue: selectedValue }"
     ></ng-container>
   </div>
 </a>

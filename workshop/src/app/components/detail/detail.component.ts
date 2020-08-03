@@ -18,7 +18,7 @@ export class DetailComponent implements OnInit {
   selectedLength;
   selectedColor;
 
-
+ selectedImage;
   constructor(
     private route: ActivatedRoute,
     private dataService: DataService
@@ -41,6 +41,7 @@ export class DetailComponent implements OnInit {
           this.selectedColor = pack.data.product.filters.colors[0];
           this.selectedLength = pack.data.product.filters.lengths[0];
           this.selectedSize = pack.data.product.filters.sizes[0];
+          this.selectedImage = pack.data.product.images[0];
         }
       })
     );
