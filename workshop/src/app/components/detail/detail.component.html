@@ -268,8 +268,16 @@
                         <div
                           class="d-flex flex-wrap justify-content-center justify-content-md-start"
                         >
-                          <app-li-filter  [values]="vm.data.product.filters.colors" [selectedValue]="selectedColor" (onValueSelected)="selectedColor = $event">
-                            <ng-template liFilterTemplate let-value let-selectedValue>
+                          <app-li-filter
+                            [values]="vm.data.product.filters.colors"
+                            [selectedValue]="selectedColor"
+                            (onValueSelected)="selectedColor = $event"
+                          >
+                            <ng-template
+                              liFilterTemplate
+                              let-value
+                              let-selectedValue
+                            >
                               <a>
                                 <span class="d-inline-block mb-1">
                                   <svg
@@ -279,7 +287,11 @@
                                     width="32"
                                     xmlns="http://www.w3.org/2000/svg"
                                   >
-                                    <g class="color-select-border" fill="none" fill-rule="evenodd">
+                                    <g
+                                      class="color-select-border"
+                                      fill="none"
+                                      fill-rule="evenodd"
+                                    >
                                       <circle
                                         class="plp-overlay-color-item"
                                         cx="16"
@@ -300,7 +312,9 @@
                                           cy="14"
                                           r="13"
                                           [attr.stroke]="
-                                          selectedValue !== value ? '#fff' : 'black'
+                                            selectedValue !== value
+                                              ? '#fff'
+                                              : 'black'
                                           "
                                           stroke-width="2"
                                         ></circle>
@@ -375,6 +389,9 @@
                           name="button"
                           type="button"
                           class="border-right-0 flex-grow-0 flex-shrink-0 py-0 px-3 quantity-select-decrease"
+                          (click)="
+                            properties.count  = properties.count - 1 
+                          "
                         >
                           -
                         </button>
@@ -382,7 +399,7 @@
                           type="number"
                           name="quantity"
                           id="quantity"
-                          value="1"
+                          [(ngModel)]="properties.count"
                           min="1"
                           class="p-0 flex-grow-1 flex-shrink-1 text-center form-control border-left-0 border-right-0 quantity-select-value"
                           aria-label="Quantity"
@@ -391,21 +408,16 @@
                           name="button"
                           type="button"
                           class="border-left-0 flex-grow-0 flex-shrink-0 py-0 px-3 quantity-select-increase"
+                          (click)="properties.count  = properties.count + 1 "
                         >
                           +
                         </button>
                       </div>
                     </div>
 
-                    <button
-                      name="button"
-                      type="submit"
-                      class="btn btn-primary w-100 text-uppercase font-weight-bold add-to-cart-button"
-                      id="add-to-cart-button"
-                      disabled=""
-                    >
-                      Add To Cart
-                    </button>
+                    <app-cart-button
+                      [properties]="properties"
+                    ></app-cart-button>
                   </div>
                 </div>
               </form>

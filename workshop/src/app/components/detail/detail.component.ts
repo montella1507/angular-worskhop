@@ -17,8 +17,12 @@ export class DetailComponent implements OnInit {
   selectedSize;
   selectedLength;
   selectedColor;
+  
 
- selectedImage;
+  properties = {
+    count: 1
+  };
+  selectedImage;
   constructor(
     private route: ActivatedRoute,
     private dataService: DataService
