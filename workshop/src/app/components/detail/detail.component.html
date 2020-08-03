@@ -2,25 +2,19 @@
   <div class="container pt-4 product-details">
     <app-loading *ngIf="vm.loading" style="display: table;"></app-loading>
     <ng-container *ngIf="!vm.loading">
-      <div class="row" data-hook="product_show">
-        <div class="col-12 col-md-7 col-lg-7" data-hook="product_left_part">
+      <div class="row" >
+        <div class="col-12 col-md-7 col-lg-7" >
           <div
             class="w-100 d-flex align-self-start justify-content-between product-details-images"
-            data-hook="product_left_part_wrap"
+            
           >
             <div
               class="d-none d-md-block product-details-thumbnails"
-              data-hook="product_thumbnails"
+              
             >
               <div
                 id="productThumbnailsCarousel"
                 class="h-100 carousel slide d-flex flex-column carousel-vertically-animated product-thumbnails-carousel"
-                data-product-carousel-group-identifier="main-product-carousel"
-                data-variant-change-trigger-identifier="productCarousel"
-                data-product-carousel-per-page="5"
-                data-product-carousel-is-slave="true"
-                data-interval="false"
-                data-hook=""
               >
                 <div class="carousel-inner order-1 h-100">
                   <div
@@ -58,7 +52,7 @@
                 <a
                   class="d-none d-sm-flex order-0 justify-content-center w-100 product-thumbnails-carousel-previous"
                   role="button"
-                  data-slide="prev"
+                  
                 >
                   <span aria-hidden="true">
                     <svg
@@ -80,7 +74,7 @@
                 <a
                   class="d-none d-sm-flex order-2 justify-content-center w-100 product-thumbnails-carousel-next"
                   role="button"
-                  data-slide="next"
+                  
                 >
                   <span aria-hidden="true">
                     <svg
@@ -101,19 +95,11 @@
                 </a>
               </div>
             </div>
-            <div class="product-details-single" data-hook="product_images">
-              <div
-                id="productCarousel"
-                class="carousel slide product-carousel"
-                data-product-carousel-group-identifier="main-product-carousel"
-                data-variant-change-trigger-identifier="productCarousel"
-                data-interval="false"
-                data-hook=""
-              >
+            <div class="product-details-single" >
+              <div id="productCarousel" class="carousel slide product-carousel">
                 <a
                   class="d-none d-md-flex h-100 justify-content-center align-items-center product-carousel-control position-absolute product-carousel-control--previous"
                   role="button"
-                  data-slide="prev"
                 >
                   <span
                     class="d-flex justify-content-center align-items-center product-carousel-control-rounded"
@@ -149,7 +135,6 @@
                 <a
                   class="d-none d-md-flex h-100 justify-content-center align-items-center product-carousel-control position-absolute product-carousel-control--next"
                   role="button"
-                  data-slide="next"
                 >
                   <span
                     class="d-flex justify-content-center align-items-center product-carousel-control-rounded"
@@ -178,8 +163,6 @@
                   >
                     <div
                       class="d-none d-lg-block product-carousel-overlay-modal-opener"
-                      data-toggle="modal"
-                      data-target="#picturesModal"
                     ></div>
                   </div>
                 </div>
@@ -188,8 +171,6 @@
                   class="d-sm-none carousel-indicators product-carousel-indicators"
                 >
                   <li
-                    data-target="#productCarousel"
-                    data-slide-to="0"
                     class="product-carousel-indicators-indicator product-carousel-indicators-indicator--visible active"
                   >
                     <img
@@ -203,14 +184,14 @@
           </div>
         </div>
 
-        <div class="col-12 col-md-5" data-hook="product_right_part">
-          <div id="product-description" data-hook="product_right_part_wrap">
+        <div class="col-12 col-md-5" >
+          <div id="product-description" >
             <h1
               class="mt-3 mt-md-0 text-center text-md-left product-details-title"
             >
               {{ vm.data.product.name }}
             </h1>
-            <div id="cart-form" data-hook="cart_form">
+            <div id="cart-form" >
               <template
                 class="availability-template availability-template-not-available-in-currency"
               ></template>
@@ -228,14 +209,10 @@
               ></template>
 
               <form id="add-to-cart-form" class="add-to-cart-form">
-                <div
-                  id="inside-product-cart-form"
-                  data-hook="inside_product_cart_form"
-                >
+                <div id="inside-product-cart-form">
                   <div
                     id="product-price"
                     class="mb-2 text-center text-md-left add-to-cart-form-price"
-                    data-hook="product_price"
                   >
                     <span class="price selling" content="16.99">
                       ${{ vm.data.product.price }}
@@ -257,7 +234,6 @@
                     <li>
                       <div
                         class="product-variants-variant product-variants-variant--color"
-                        data-option-type-id="1"
                       >
                         <span
                           class="d-block mb-2 text-center text-md-left text-uppercase product-variants-variant-title"
@@ -329,10 +305,7 @@
                       </div>
                     </li>
                     <li>
-                      <div
-                        class="product-variants-variant"
-                        data-option-type-id="3"
-                      >
+                      <div class="product-variants-variant">
                         <span
                           class="d-block mb-2 text-center text-md-left text-uppercase product-variants-variant-title"
                         >
@@ -353,7 +326,7 @@
                     <li>
                       <div
                         class="product-variants-variant"
-                        data-option-type-id="2"
+                        
                       >
                         <span
                           class="d-block mb-2 text-center text-md-left text-uppercase product-variants-variant-title"
@@ -389,9 +362,7 @@
                           name="button"
                           type="button"
                           class="border-right-0 flex-grow-0 flex-shrink-0 py-0 px-3 quantity-select-decrease"
-                          (click)="
-                            properties.count  = properties.count - 1 
-                          "
+                          (click)="properties.count = properties.count - 1"
                         >
                           -
                         </button>
@@ -408,7 +379,7 @@
                           name="button"
                           type="button"
                           class="border-left-0 flex-grow-0 flex-shrink-0 py-0 px-3 quantity-select-increase"
-                          (click)="properties.count  = properties.count + 1 "
+                          (click)="properties.count = properties.count + 1"
                         >
                           +
                         </button>
@@ -425,7 +396,7 @@
           </div>
         </div>
       </div>
-      <div class="pb-4 pt-md-5 row" data-hook="product_description">
+      <div class="pb-4 pt-md-5 row">
         <div class="col-12 col-md-7 col-lg-6">
           <h3
             class="pt-4 font-weight-bold text-uppercase product-details-subtitle"
@@ -435,7 +406,7 @@
           <div
             id="product-description-short"
             class="m-0 text-break product-description"
-            data-hook="description"
+            
           >
             {{ vm.data.product.description }}
           </div>
@@ -443,7 +414,7 @@
           <div
             id="product-description-long"
             class="m-0 text-break product-description d-none"
-            data-hook="description"
+            
           >
             Suscipit dolorem harum commodi quasi facere. Cumque voluptatibus et
             eos hic excepturi adipisci sunt. Corrupti praesentium et voluptatem
@@ -451,7 +422,7 @@
           </div>
         </div>
         <div class="d-none d-lg-block col-lg-1"></div>
-        <div class="col-12 col-md-5" data-hook="product_properties">
+        <div class="col-12 col-md-5" >
           <h3
             class="pt-4 font-weight-bold text-uppercase product-details-subtitle"
           >
@@ -460,7 +431,7 @@
           <ul
             id="product-properties"
             class="m-0 list-unstyled product-properies"
-            data-hook=""
+            
           >
             <li>
               <span class="font-weight-bold text-break">Type:</span>
@@ -496,7 +467,7 @@
             </li>
           </ul>
         </div>
-        <div class="col-12" data-hook="promotions"></div>
+        <div class="col-12" ></div>
       </div>
 
       <div id="no-product-available" class="no-product-available-dropdown">
@@ -557,7 +528,7 @@
               <button
                 type="button"
                 class="close"
-                data-dismiss="modal"
+                
                 aria-label="Close"
               >
                 <span aria-hidden="true">
@@ -615,12 +586,7 @@
                   <div
                     id="productModalThumbnailsCarousel"
                     class="h-100 carousel slide d-flex flex-column carousel-vertically-animated product-thumbnails-carousel"
-                    data-product-carousel-group-identifier="main-product-modal-carousel"
-                    data-variant-change-trigger-identifier="productCarousel"
-                    data-product-carousel-per-page="4"
-                    data-product-carousel-is-slave="true"
-                    data-interval="false"
-                    data-hook=""
+                    
                   >
                     <div class="carousel-inner order-1 h-100">
                       <div
@@ -634,15 +600,11 @@
                           >
                             <div
                               class="product-thumbnails-carousel-item-single product-thumbnails-carousel-item-single--visible"
-                              data-product-carousel-to-slide="0"
-                              data-variant-is-master="false"
-                              data-variant-id="779"
+                              
                             >
                               <div
                                 class="product-thumbnails-carousel-item-single"
-                                data-product-carousel-to-slide="89"
-                                data-variant-is-master="false"
-                                data-variant-id="808"
+                                
                               >
                                 muhehe
                                 <img
@@ -666,7 +628,6 @@
                       <a
                         class="d-none d-sm-flex order-0 justify-content-center w-100 product-thumbnails-carousel-previous"
                         role="button"
-                        data-slide="prev"
                       >
                         <span aria-hidden="true">
                           <svg
@@ -689,7 +650,7 @@
                       <a
                         class="d-none d-sm-flex order-2 justify-content-center w-100 product-thumbnails-carousel-next"
                         role="button"
-                        data-slide="next"
+                        
                       >
                         <span aria-hidden="true">
                           <svg
@@ -714,15 +675,12 @@
                     <div
                       id="productModalCarousel"
                       class="carousel slide product-carousel"
-                      data-product-carousel-group-identifier="main-product-modal-carousel"
-                      data-variant-change-trigger-identifier="productCarousel"
-                      data-interval="false"
-                      data-hook=""
+                      
                     >
                       <a
                         class="d-none d-md-flex h-100 justify-content-center align-items-center product-carousel-control position-absolute product-carousel-control--previous"
                         role="button"
-                        data-slide="prev"
+                        
                       >
                         <span
                           class="d-flex justify-content-center align-items-center product-carousel-control-rounded"
@@ -748,7 +706,7 @@
                       <a
                         class="d-none d-md-flex h-100 justify-content-center align-items-center product-carousel-control position-absolute product-carousel-control--next"
                         role="button"
-                        data-slide="next"
+                        
                       >
                         <span
                           class="d-flex justify-content-center align-items-center product-carousel-control-rounded"
@@ -780,8 +738,7 @@
 
                         <div
                           class="carousel-item product-carousel-item active"
-                          data-variant-is-master="false"
-                          data-variant-id="779"
+                          
                         >
                           <div class="product-carousel-item-squared">
                             <img
@@ -799,8 +756,7 @@
                         class="d-sm-none carousel-indicators product-carousel-indicators"
                       >
                         <li
-                          data-target="#productModalCarousel"
-                          data-slide-to="0"
+                          
                           class="product-carousel-indicators-indicator product-carousel-indicators-indicator--visible active"
                         >
                           <img

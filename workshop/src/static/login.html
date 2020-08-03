@@ -1,0 +1,124 @@
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>Workshop</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="icon" type="image/x-icon" href="favicon.ico">
+      <link rel="stylesheet" href="./assets/style.css">
+      <style></style>
+   </head>
+   <body class="one-col" id="default" data-hook="body">
+               <div class="container user-sessions user-sessions-new">
+                  <div class="row">
+                     <div class="col-lg-6 offset-lg-3">
+                        <div class="mb-3">
+                           <div id="existing-customer" data-hook="login">
+                              <div class="col-lg-11 mx-auto">
+                                 <h3 class="spree-mb-large spree-mt-large spree-header"> Log in to continue </h3>
+                                 <form novalidate="" class="new_spree_user">
+                                    <div id="password-credentials" class="mb-4">
+                                       <div class="form-group mb-4">
+                                          <p class="form-group checkout-content-inner-field"><input placeholder="Email" autofocus="autofocus" type="email" name="spree_user[email]" id="spree_user_email" class="spree-flat-input"></p>
+                                       </div>
+                                       <div class="form-group mb-4">
+                                          <p class="form-group checkout-content-inner-field"><input autocomplete="off" placeholder="Password" autofocus="autofocus" type="password" class="spree-flat-input"></p>
+                                       </div>
+                                    </div>
+                                    <div class="spree-checkbox-container mt-4 mt-sm-5 mt-lg-4 spree-mb-medium">
+                                       <div class="spree-checkbox"><input tabindex="3"  type="checkbox" value="1" name="spree_user[remember_me]" id="spree_user_remember_me"><label for="spree_user_remember_me">Remember me</label></div>
+                                       <label for="spree_user_remember_me" class="spree-checkbox-label">Remember me</label>
+                                    </div>
+                                    <input type="submit" name="commit" value="Log in" tabindex="4" class="btn btn-primary btn-block spree-btn mt-2">
+                                 </form>
+                              </div>
+                              <div data-hook="login_extras"></div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+     
+         <!---->
+         <footer id="footer" data-turbolinks-permanent="" class="pt-2 mx-auto border-top footer-spree">
+            <div class="container">
+               <div class="row d-xl-flex justify-content-xl-around pb-xl-5">
+                  <div class="d-flex d-xl-block flex-xl-grow-0 col-xl-4">
+                     <figure class="logo mx-auto mx-xl-0 pt-xl-2 pb-xl-1"><a aria-label="Spree Demo Site"><img alt="Spree Demo Site" title="Spree Demo Site" src="assets/images/logo-314aa0df77032e4088152ccce98323cf16a0bd5b0c77fa72595a7dc217807d0e.svg"></a></figure>
+                     <div class="d-none d-xl-block pt-xl-2 footer-spree-info"> This is the new Spree UX DEMO | OVERVIEW: http://bit.ly/new-spree-ux | DOCS: http://bit.ly/spree-ux-customization-docs | CONTACT: https://spreecommerce.org/contact/ </div>
+                  </div>
+                  <div class="d-block flex-nowrap py-2 order-xl-last col-xl-3 offset-xl-1">
+                     <div class="d-none d-xl-block pt-4 pb-3 pl-2 footer-spree-label"> Follow us </div>
+                     <div class="d-flex d-xl-block justify-content-center mx-auto">
+                        <div class="d-flex">
+                           <a target="blank" rel="nofollow noopener">
+                              <figure id="facebook" class="px-2">
+                                 <svg xmlns="http://www.w3.org/2000/svg" height="22px" viewBox="0 0 19.28 19.175" width="22px" class="spree-icon">
+                                    <path d="m369.18 160.127a1.051 1.051 0 0 1 -1.048 1.048h-4.925v-7.439h2.515l.367-2.882h-2.882v-1.834c0-.838.21-1.415 1.415-1.415h1.519v-2.62a17.157 17.157 0 0 0 -2.253-.1 3.5 3.5 0 0 0 -3.72 3.825v2.148h-2.515v2.882h2.515v7.439h-9.221a1.051 1.051 0 0 1 -1.048-1.048v-17.083a1.051 1.051 0 0 1 1.049-1.048h17.132a1.051 1.051 0 0 1 1.048 1.048v17.079z" fill="#0074c2" transform="translate(-349.9 -142)"></path>
+                                 </svg>
+                              </figure>
+                           </a>
+                           <a target="blank" rel="nofollow noopener">
+                              <figure id="twitter" class="px-2">
+                                 <svg xmlns="http://www.w3.org/2000/svg" height="22px" viewBox="0 0 19.646 16.451" width="22px" class="spree-icon">
+                                    <path d="m883.165 145.014a7.288 7.288 0 0 1 -2.567 1 4.039 4.039 0 0 0 -2.934-1.31 4.093 4.093 0 0 0 -4.034 4.139 5.768 5.768 0 0 0 .1.943 11.344 11.344 0 0 1 -8.278-4.3 4.021 4.021 0 0 0 -.524 2.1 4.364 4.364 0 0 0 1.781 3.458 3.724 3.724 0 0 1 -1.834-.524v.052a4.06 4.06 0 0 0 3.248 4.034 3.377 3.377 0 0 1 -1.048.157 3.223 3.223 0 0 1 -.734-.052 4.11 4.11 0 0 0 3.772 2.881 7.908 7.908 0 0 1 -4.977 1.781 5.694 5.694 0 0 1 -.943-.052 11.283 11.283 0 0 0 6.182 1.834c7.387 0 11.474-6.287 11.474-11.736v-.524a7.793 7.793 0 0 0 1.991-2.148 7.191 7.191 0 0 1 -2.305.629 5.156 5.156 0 0 0 1.63-2.362z" fill="#0074c2" transform="translate(-864.2 -144.7)"></path>
+                                 </svg>
+                              </figure>
+                           </a>
+                           <a target="blank" rel="nofollow noopener">
+                              <figure id="instagram" class="px-2">
+                                 <svg xmlns="http://www.w3.org/2000/svg" height="22px" viewBox="0 0 19.227 19.175" width="22px" class="spree-icon">
+                                    <path d="m1009.722 142.1h-14.617a2.281 2.281 0 0 0 -2.305 2.253v14.669a2.281 2.281 0 0 0 2.305 2.253h14.617a2.281 2.281 0 0 0 2.305-2.253v-14.669a2.352 2.352 0 0 0 -2.305-2.253zm-3.143 3.039a.581.581 0 0 1 .576-.576h1.781a.581.581 0 0 1 .576.576v1.781a.581.581 0 0 1 -.576.576h-1.781a.581.581 0 0 1 -.576-.576zm-4.191 2.934a3.668 3.668 0 1 1 0 7.335 3.667 3.667 0 1 1 0-7.335zm7.806 10.845a.581.581 0 0 1 -.576.576h-14.408a.582.582 0 0 1 -.576-.576v-9.011h2.41a3.765 3.765 0 0 0 -.419 1.834 5.868 5.868 0 0 0 11.736 0 2.929 2.929 0 0 0 -.472-1.834h2.41v9.011z" fill="#0074c2" transform="translate(-992.8 -142.1)"></path>
+                                 </svg>
+                              </figure>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="py-xl-2 col-xl-3 offset-xl-1">
+                     <div class="d-none d-xl-block pt-4 pb-3 footer-spree-label"> Contact us </div>
+                     <div class="d-flex flex-column align-items-center align-items-xl-start pb-3 flex-grow-2 footer-spree-contact-note">
+                        <div> Spree Demo Site, 2382 Locust Ave<br> Long Beach, CA 90806, USA </div>
+                        <div>Call us now: 760-673-8590</div>
+                        <div> Email: spree@example.com </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="row d-none d-xl-flex border-top py-5 text-uppercase footer-spree-menu-links">
+                  <!---->
+                  <div class="col-3">
+                     <div class="footer-spree-label"><a href="/catalog/women/all">Women</a></div>
+                     <div class="pt-2"><a href="/catalog/women/skirts">Skirts</a></div>
+                     <div class="pt-2"><a href="/catalog/women/dresses">Dresses</a></div>
+                     <div class="pt-2"><a href="/catalog/women/shirts-and-blouses">Shirts and Blouses</a></div>
+                     <div class="pt-2"><a href="/catalog/women/sweaters">Sweaters</a></div>
+                     <div class="pt-2"><a href="/catalog/women/Tops-and-T-shirts">Tops and T-shirts</a></div>
+                     <div class="pt-2"><a href="/catalog/women/jackets-and-coats">Jackets and Coats</a></div>
+                     <!---->
+                  </div>
+                  <div class="col-3">
+                     <div class="footer-spree-label"><a href="/catalog/men/all">Men</a></div>
+                     <div class="pt-2"><a href="/catalog/men/shirts">Shirts</a></div>
+                     <div class="pt-2"><a href="/catalog/men/t-shirts">T-shirts</a></div>
+                     <div class="pt-2"><a href="/catalog/men/sweaters">Sweaters</a></div>
+                     <div class="pt-2"><a href="/catalog/men/jackets-and-coats">Jackets and Coats</a></div>
+                     <!---->
+                  </div>
+                  <div class="col-3">
+                     <div class="footer-spree-label"><a href="/catalog/sportswear/all">Sportswear</a></div>
+                     <div class="pt-2"><a href="/catalog/sportswear/tops">Tops</a></div>
+                     <div class="pt-2"><a href="/catalog/sportswear/sweatshirts">Sweatshirts</a></div>
+                     <div class="pt-2"><a href="/catalog/sportswear/pants">Pants</a></div>
+                     <!---->
+                  </div>
+                  <!---->
+                  <div class="col-3">
+                     <div class="footer-spree-label"> MY ACCOUNT </div>
+                     <div class="pt-2"><a>MY ORDERS</a></div>
+                  </div>
+                  <!----><!----><!----><!---->
+               </div>
+            </div>
+         </footer>
+  <script src="./assets/scripts.js" defer=""></script>
+   </body>
+</html>

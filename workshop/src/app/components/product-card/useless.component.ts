@@ -1,9 +1,10 @@
-import { Component, OnInit, Input, Output, EventEmitter, Injectable, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, Injectable, ChangeDetectionStrategy,ViewEncapsulation } from '@angular/core';
 import { ProductCardService } from './product-card.service';
 
 
 @Component({
     selector: 'app-useless',
+    encapsulation: ViewEncapsulation.None,
     template: `  
     <div class="product-component-name" title="Hoodie">
     {{ pcService.name }}

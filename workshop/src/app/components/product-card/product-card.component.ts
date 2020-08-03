@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter, Injectable, SimpleChanges, OnChanges } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, Injectable, SimpleChanges, OnChanges, ViewEncapsulation } from '@angular/core';
 import { ProductCardService } from './product-card.service';
 
 
@@ -8,7 +8,8 @@ import { ProductCardService } from './product-card.service';
   styleUrls: ['./product-card.component.scss'],
   providers: [
     ProductCardService
-  ]
+  ],
+  encapsulation: ViewEncapsulation.None
 })
 export class ProductCardComponent implements OnInit, OnChanges {
 

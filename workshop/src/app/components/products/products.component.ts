@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { transition, trigger, query, stagger, animate, style } from '@angular/animations';
 import { DataService } from 'src/app/services/data-service.service';
 import { Router, ActivatedRoute } from '@angular/router';
@@ -10,6 +10,7 @@ import { map, filter } from 'rxjs/operators';
   selector: 'app-products',
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.scss'],
+  encapsulation: ViewEncapsulation.None,
   animations: [
     trigger('listAnimation', [
       transition('* => *', [ // each time the binding value changes

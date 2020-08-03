@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter, ContentChild, Directive, TemplateRef } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, ContentChild, Directive, TemplateRef, ViewEncapsulation } from '@angular/core';
 
 @Directive({
   selector: '[liFilterTemplate]'
@@ -8,7 +8,8 @@ export class LiFilterTemplateDirective { }
 @Component({
   selector: 'app-li-filter',
   templateUrl: './li-filter.component.html',
-  styleUrls: ['./li-filter.component.scss']
+  styleUrls: ['./li-filter.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class LiFilterComponent implements OnInit {
 

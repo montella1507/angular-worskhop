@@ -24,7 +24,7 @@ export class DataService {
 
     loadProducts() {
         return this.http.get('/assets/data/products.json')
-            .pipe(delay(500))
+            .pipe(delay(1000))
             .subscribe(x => this.products$.next({
                 data: x as any,
                 loading: false
@@ -33,7 +33,7 @@ export class DataService {
 
     loadCategories() {
         return this.http.get('/assets/data/categories.json')
-            .pipe(delay(500))
+            .pipe(delay(1000))
             .subscribe(x => this.categories$.next({
                 loading: false,
                 data: x as any

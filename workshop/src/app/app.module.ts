@@ -13,8 +13,8 @@ import { PortalComponent } from './components/portal/portal.component';
 import { ProductsComponent } from './components/products/products.component';
 import { DetailComponent } from './components/detail/detail.component';
 import { LoadingComponent } from './components/loading/loading.component';
-import { ColorPickerComponent } from './color-picker/color-picker.component';
-import { LiFilterComponent, LiFilterTemplateDirective } from './li-filter/li-filter.component';
+import { ColorPickerComponent } from './components/color-picker/color-picker.component';
+import { LiFilterComponent, LiFilterTemplateDirective } from './components/li-filter/li-filter.component';
 import { CartButtonComponent } from './components/detail/cart-button/cart-button.component';
 import { FormsModule } from '@angular/forms';
 
