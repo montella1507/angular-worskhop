@@ -513,8 +513,9 @@
                       </div>
                       <div data-hook="homepage_products" class="col-md-12 col-lg-9 ">
                          <div class="row">
+
                              <app-product-card  
-                            *ngFor="let product of products"
+                            *ngFor="let product of (dataService.products$ | async).data"
                              [name]="product.name"
                              [price]="product.price"
                              [imageUrl]="product.imageUrl"
