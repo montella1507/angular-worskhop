@@ -57,7 +57,9 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "src/scripts/script.js"
+            ]
           },
           "configurations": {
             "production": {

@@ -425,7 +425,10 @@
                                </svg>
                             </div>
                             <div id="collapseFilterLength" aria-labelledby="filtersLength" class="collapse ">
-                               <div class="card-body px-0 pt-1 ">
+                             <app-li-filter [values]="[1,2,3,4]"
+                             [selectedValue]="selectedLength"
+                             (onValueSelected)="selectedLength = $event"></app-li-filter>
+                              <div class="card-body px-0 pt-1 ">
                                
                                      <a class="">
                                         <div class="d-inline-block text-uppercase py-1 px-2 m-1 plp-overlay-card-item">

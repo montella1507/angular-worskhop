@@ -12,6 +12,7 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  selectedLength = 1;
   products = [
     {
       "id": "product_84",
